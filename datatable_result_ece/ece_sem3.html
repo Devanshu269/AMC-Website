@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+  
+    <title>ECE 3rd SEM Marks</title>
+  
+    <!-- Bootstrap core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  
+    <!-- Custom styles for this template -->
+    <link href="../css/simple-sidebar.css" rel="stylesheet">
+    <link href="../icofont/icofont.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/mysecond.css">
+       <!-- Font-awesome -->
+         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+         <link href="../boxicons/css/boxicons.min.css" rel="stylesheet">
+         <script src="../vendor/jquery/jquery.min.js"></script>
+         <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  
+           <!-- jQuery library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+  
+      <!-- Popper JS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+
+      <script src="jquery-3.6.0.min.js"></script>
+  
+      <link rel="stylesheet" type="text/css" href="datatables.css">
+  
+      <script type="text/javascript" charset="utf8" src="datatables.js"></script>
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.7.0/css/buttons.dataTables.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+        }
+        .btn-tb {
+            position: absolute;
+            top: 20%;
+            left: 97%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        $("#menu-toggle").click(function(e) {
+          e.preventDefault();
+          $("#wrapper").toggleClass("toggled");
+        });
+      </script>
+  <nav class="navbar navbar-expand-lg navbar-light big-logo">
+  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+   <span class="navbar-toggler-icon"></span>
+  </button> -->
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+   <img src="../images/AMC_engg_college_blue.png" alt="" width="230px"; height="100px";>
+ </div>
+</nav>
+
+    <div class="heading-title">
+        <h3 class="" href="#">ECE SEM 3 | DataTable</h3>
+        <a href="../Admin_Dashboard.html" class="btn btn-light btn-tb" tabindex="-1" role="button" aria-disabled="true"><img src="../images//back.png" width="20px" height="20px"></img>
+        </a>
+    </div>
+    <br>
+    <p class="wrapper"> Semester Filter&nbsp;&nbsp;&nbsp;
+        <label>
+            <input type="checkbox" id="secA"> A
+           </label>&nbsp;&nbsp;&nbsp;
+           <label>
+            <input type="checkbox" id="secB"> B
+           </label>&nbsp;&nbsp;&nbsp;
+        <label>
+        <input type="checkbox" id="secC"> C
+       </label>&nbsp;&nbsp;&nbsp;
+        <label>
+           <input type="checkbox" id="secD"> D
+          </label>&nbsp;&nbsp;&nbsp;
+    </p>
+    <div class="container-fluid">
+        <a href="../retrive_t/retrive_admission.html"type="button" class="btn btn-primary text-dark font-weight-bold" name="download" id="download">Update/Delete</a>
+    </div>
+    <br>
+    <div id="student">
+    <div class="card">
+
+        <div class="card-header bg-info">
+            <a class="btn btn-info" data-toggle="collapse" href="#collapseOne">
+            <img src="../images/marks.jpg" width="50" height="50" class="rounded-circle" alt=""  > FIRST INTERNAL</a>
+        </div>
+            <div id="collapseOne" class="collapse collapse-show" data-parent="#student" style="background-color:#bbe1fa;">
+              <div class="card-body bimage1">
+                  
+    <div id='invoice'>
+        <table id="user_data" class="display" width="100%" cellspacing="0">
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+</div>
+<div class="card">
+    <div class="card-header bg-info">
+<a class="collapsed btn btn-info" data-toggle="collapse" href="#collapseTwo">
+  <img src="../images/marks.jpg" width="50" height="50" class="rounded-circle" alt=""> SECOND INTERNAL
+    </a>
+    </div>
+<div id="collapseTwo" class="collapse" data-parent="#student" style="background-color:#bbe1fa;">
+    <div class="card-body bimage1">
+              
+<div id='invoice'>
+    <table id="user_data2" class="display" width="100%" cellspacing="0">
+        <tbody>
+
+        </tbody>
+    </table>
+</div>
+</div>
+</div>
+</div>
+<div class="card">
+    <div class="card-header bg-info">
+<a class="collapsed btn btn-info" data-toggle="collapse" href="#collapseThree">
+  <img src="../images/marks.jpg" width="50" height="50" class="rounded-circle" alt=""> <label><span>THIRD INTERNAL</span></label>
+    </a>
+    </div>
+<div id="collapseThree" class="collapse" data-parent="#student" style="background-color:#bbe1fa;">
+    <div class="card-body bimage1">
+
+      <div class="container-fluid row form-group">
+        <div class="col-4 form-inline">
+<div id='invoice'>
+    <table id="user_data3" class="display" width="100%" cellspacing="0">
+        <tbody>
+
+        </tbody>
+    </table>
+</div>
+</div>
+</div>
+</div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.0/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.print.min.js"></script>
+    <script src="https://cdn.datatables.net/select/1.3.3/js/dataTables.select.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-storage.js"></script>
+    <script src="js/ece_sem3.js"></script>
+</body>
+
+</html>

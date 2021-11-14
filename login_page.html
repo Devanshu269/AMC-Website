@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+ <html lang="en" dir="ltr">
+   <head>
+     <meta charset="utf-8">
+   <title>AMC College Management System</title>
+   <!-- Google-fonts -->
+           <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+   <!-- Bootstrap -->
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+         <link rel="stylesheet" href="css/style.css">
+   <!-- Font-awesome -->
+           <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+  <!-- Java-Scripts -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <style>
+  body,html{
+    line-height: 1;
+    height: 100%;
+    margin: 0;
+  }
+  .bg {
+    /* The image used */
+    background-image: url("images/try.png");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+</style>
+  <body>
+    <!-- navbar -->
+    <div class="navbar-container" >
+      <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+       <a class="navbar-brand" href="#">College Management System | Admin Login</a>
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span> -->
+        <!-- </button> -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a href="Home_page.html" class="btn btn-light" tabindex="-1" role="button" aria-disabled="true"><img src="images/back.png" width="20px" height="20px"></img></a>
+            </li>
+            <!-- <li class="nav-item active">
+              <button class="btn btn-primary" type="button" name="button" href="">User Sign Up</button>
+            </li><i class="fa fa-arrow-left" aria-hidden="true">
+          <li class="nav-item active">
+            <button class="btn btn-primary" type="button" name="button" href="">Admin Login</button>
+          </li> -->
+        </ul>
+      </div>
+    </nav>
+  </div>
+<!-- login-form -->
+<div class="bg">
+    <div class="login_table">
+  <div class="col-lg-4 main-header1 w2-white w2-padding-large w2-large w2-opacity w2-hover-opacity-off">
+    <form class=" text-center">
+      <h4>ACMS Login</h4>
+      <hr style="text-align:center;margin-left:0">
+      <div class="form-group">
+          <p form="login_type" class=""></p>
+          <select name="login_type" id="login_type" class="form-control" style="width:400px; height:40px; ">
+                      <option value="ad">Admin</option>
+                      <option value="fc">Teacher</option>
+                      <option value="ac">ACCOUNTS</option>
+                      <option value="tc">TRANSPORT</option>
+                      <option value="hc">Hostel</option>
+                      <option value="sc">Student</option>
+                  </select>
+      </div>
+        <div class="form-group">
+          <!-- <label for="exampleInputEmail1">User Id</label> -->
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Login Id">
+          <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+        </div>
+        <div class="form-group">
+          <!-- <label for="exampleInputPassword1">Password</label> -->
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+
+          <a type="button" onclick="getdata();" class="btn btn-primary col-lg-12"><i class="far fa-user" ></i> Login</a>
+        <br>
+        <!-- <div class="row">
+          <div class="form-check col-lg-6">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+          </div>
+          <div class="underlined-text form-check col-lg-6">
+            <a href="Password_reset_page.html">Forgot Password</a>
+          </div>
+        </div> -->
+      </form>
+    </div>
+  </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-auth.js"></script>
+    <script src="JavaScript/login_page.js"></script>
+</body>
+
+</html>
+
+  </body>
+</html>

@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ECE 3rd SEM Marks Details</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- Google-fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css1/style_retrieve.css">
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/simple-sidebar.css" rel="stylesheet">
+    <link href="../icofont/icofont.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/mysecond.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Custome PDF download-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+        }
+
+        .bg {
+            /* The image used */
+            background-color: #046582;
+            /* Full height */
+            height: 20%;
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        body {
+            background-color: #edeef7;
+        }
+
+        .header-text {
+            position: absolute;
+            top: 23%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.8rem;
+            padding: 2%;
+        }
+
+        .header-img {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .img-stud {
+            position: absolute;
+            top: 37%;
+            left: 78%;
+            transform: translate(-50%, -50%);
+        }
+
+        #st {
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+        }
+
+        #tct,
+        #cct {
+            height: 400px;
+            width: 400px;
+            border: 2px solid black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light big-logo">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+   <span class="navbar-toggler-icon"></span>
+  </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <img src="../images/AMC_engg_college_blue.png" alt="" width="230px" ; height="100px" ;>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" id="a_get" role="button">Search</a>
+                </li>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown active">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Update/Delete</a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="nav-link" name="a_add" id="a_add" role="button">Update</a>
+                        <a class="nav-link" name="a_delete" id="a_delete" role="button">Delete</a>
+                      </div>
+                    </li>
+                  </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Results</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="retrive_ec_1.html">SEM 1</a>
+                          <a class="dropdown-item" href="retrive_ec_2.html">SEM 2</a>
+                          <a class="dropdown-item" href="retrive_ec_3.html">SEM 3</a>
+                          <a class="dropdown-item" href="retrive_ec_4.html">SEM 4</a>
+                          <a class="dropdown-item" href="retrive_ec_5.html">SEM 5</a>
+                          <a class="dropdown-item" href="retrive_ec_6.html">SEM 6</a>
+                          <a class="dropdown-item" href="retrive_ec_7.html">SEM 7</a>
+                          <a class="dropdown-item" href="retrive_ec_8.html">SEM 8</a>
+                      </div>
+                  </li>
+              </ul>
+              <li class="nav-item">
+                  <a class=" nav-link" role="button" id="downloadPDF">Download</a>
+              </li>
+              <li class="nav-item">
+                     <a class="nav-link" href="../retrive_s/retrive_student.html">Back</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <hr style="height:2px;border-width: 0;color:green;background-color:lightblue">
+    <div class="contact">
+        <h3>Enter information</h3>
+        <form id="contactForm">
+            <!-- <p>
+                <label>Name</label>
+                <input type="text" name="s_fname" id="s_fname" required>
+            </p> -->
+            <p>
+                <label for="">USN</label>
+                <input type="text" name="s_usn" id="s_usn" required>
+            </p>
+
+            <!-- <p class="full">
+                        <button type="button" onclick="getdata();">Get</button>
+                    </p> -->
+
+        </form>
+        <br>
+        <br>
+
+        <form id="student">
+          <div class="">
+
+
+            <h5>INTERNAL 1</h5>
+            <br>
+            <!-- <p>
+                <label>USN</label>
+                <input type="text" id="s2_usn">
+
+            </p> -->
+            <p>
+                <label>Constitution of India, professional ethics and cyber law:</label>
+                <input type="text" id="s1_aadhar1">
+            </p>
+            <p><label for="">Network theory:</label>
+                <input type="text" id="s1_aadhar2">
+                <!-- <strong id="s1_aadhar2"></strong> -->
+            </p>
+            <p>
+                <label>Electronic devices:</label>
+                <input type="text" id="s1_aadhar3">
+                <!-- <strong id="s_sem"></strong> -->
+            </p>
+            <p>
+                <label>Digital system design:</label>
+                <input type="text" id="s1_mob">
+            </p>
+            <p>
+                <label>Computer organization and architecture:</label>
+                <input type="text" id="s1_email">
+                <!-- <strong id="s_year"></strong> -->
+            </p>
+            <p>
+                <label>Power electronics and instrumentation:</label>
+                <input type="text" id="s1_flat1">
+                <!-- <strong id="s_email"></strong> -->
+
+            </p>
+            <p>
+                <label>Electronic devices and instrumentation laboratory:</label>
+                <input type="text" id="s1_flat2">
+                <!-- <strong id="s_aadhar"></strong> -->
+            </p>
+            <p>
+                <label> Digital system design laboratory:</label>
+                <input type="text" id="s1_road1">
+                <!-- <strong id="s_sex"></strong> -->
+            </p>
+            <p>
+                <label>Transform calculus ,fourier series and numerical techniques:</label>
+                <input type="text" id="s1_road2">
+                <!-- <strong id="s_sex"></strong> -->
+            </p>
+            <p>
+                <label> Additional mathematics-I:</label>
+                <input type="text" id="s1_road3">
+                <!-- <strong id="s_sex"></strong> -->
+            </p>
+            <br>
+        <br>
+          </div>
+          <div class="">
+
+          <H5>INTERNAL 2</H5>
+          <br>
+          <p>
+            <label>Constitution of India, professional ethics and cyber law:</label>
+            <input type="text" id="s2_aadhar1">
+        </p>
+        <p><label for="">Network theory:</label>
+            <input type="text" id="s2_aadhar2">
+            <!-- <strong id="s2_aadhar2"></strong> -->
+        </p>
+        <p>
+            <label>Electronic devices:</label>
+            <input type="text" id="s2_aadhar3">
+            <!-- <strong id="s_sem"></strong> -->
+        </p>
+        <p>
+            <label>Digital system design:</label>
+            <input type="text" id="s2_mob">
+        </p>
+        <p>
+            <label>Computer organization and architecture:</label>
+            <input type="text" id="s2_email">
+            <!-- <strong id="s_year"></strong> -->
+        </p>
+        <p>
+            <label>Power electronics and instrumentation:</label>
+            <input type="text" id="s2_flat1">
+            <!-- <strong id="s_email"></strong> -->
+
+        </p>
+        <p>
+            <label>Electronic devices and instrumentation laboratory:</label>
+            <input type="text" id="s2_flat2">
+            <!-- <strong id="s_aadhar"></strong> -->
+        </p>
+        <p>
+            <label> Digital system design laboratory:</label>
+            <input type="text" id="s2_road1">
+            <!-- <strong id="s_sex"></strong> -->
+        </p>
+        <p>
+            <label>Transform calculus ,fourier series and numerical techniques:</label>
+            <input type="text" id="s2_road2">
+            <!-- <strong id="s_sex"></strong> -->
+        </p>
+        <p>
+            <label> Additional mathematics-I:</label>
+            <input type="text" id="s2_road3">
+            <!-- <strong id="s_sex"></strong> -->
+        </p>
+        <br>
+        <br>
+
+      </div>
+      <div class="">
+
+
+<h5>INTERNAL 3</h5>
+<br>
+<p>
+    <label>Constitution of India, professional ethics and cyber law:</label>
+    <input type="text" id="s3_aadhar1">
+</p>
+<p><label for="">Network theory:</label>
+    <input type="text" id="s3_aadhar2">
+    <!-- <strong id="s3_aadhar2"></strong> -->
+</p>
+<p>
+    <label>Electronic devices:</label>
+    <input type="text" id="s3_aadhar3">
+    <!-- <strong id="s_sem"></strong> -->
+</p>
+<p>
+    <label>Digital system design:</label>
+    <input type="text" id="s3_mob">
+</p>
+<p>
+    <label>Computer organization and architecture:</label>
+    <input type="text" id="s3_email">
+    <!-- <strong id="s_year"></strong> -->
+</p>
+<p>
+    <label>Power electronics and instrumentation:</label>
+    <input type="text" id="s3_flat1">
+    <!-- <strong id="s_email"></strong> -->
+
+</p>
+<p>
+    <label>Electronic devices and instrumentation laboratory:</label>
+    <input type="text" id="s3_flat2">
+    <!-- <strong id="s_aadhar"></strong> -->
+</p>
+<p>
+    <label> Digital system design laboratory:</label>
+    <input type="text" id="s3_road1">
+    <!-- <strong id="s_sex"></strong> -->
+</p>
+<p>
+    <label>Transform calculus ,fourier series and numerical techniques:</label>
+    <input type="text" id="s3_road2">
+    <!-- <strong id="s_sex"></strong> -->
+</p>
+<p>
+    <label> Additional mathematics-I:</label>
+    <input type="text" id="s3_road3">
+    <!-- <strong id="s_sex"></strong> -->
+</p>
+  </div>
+        </form>
+        <br>
+        <br>
+        <div id="top_x_div" style="width: 900px; height: 500px;"></div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-database.js"></script>
+</body>
+<script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyAdWq4-ZE4Yv87w_AEyy5b5JwkW9A8iL3U",
+        authDomain: "contact-form-38b0b.firebaseapp.com",
+        projectId: "contact-form-38b0b",
+        storageBucket: "contact-form-38b0b.appspot.com",
+        messagingSenderId: "748179068137",
+        appId: "1:748179068137:web:5d99c5e7b8012158990c78",
+        measurementId: "G-KTGWG17W1K"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    var usn
+    document.getElementById('a_get').onclick = function() {
+        usn = document.getElementById("s_usn").value;
+        if (usn == "") {
+            alert("Enter the USN");
+            // document.getElementById('student').reset();
+        } else {
+            getdatag();
+                getdata1();
+                getdata2();
+                getdata3();
+        }
+    }
+    function getdata1() {
+        try {
+            firebase.database().ref('Result/Sem3/ECE/IA1/' + usn).once('value', function(snapshot) {
+
+                    document.getElementById('s1_aadhar1').value = snapshot.val().Constitution_of_India;
+                    document.getElementById('s1_aadhar2').value = snapshot.val().Network_theory;
+                    document.getElementById('s1_aadhar3').value = snapshot.val().Electronic_devices;
+                    document.getElementById('s1_mob').value = snapshot.val().Digital_system_design;
+                    document.getElementById('s1_email').value = snapshot.val().Computer_organization_and_architecture;
+                    document.getElementById('s1_flat1').value = snapshot.val().Power_electronics_and_instrumentation;
+                    document.getElementById('s1_flat2').value = snapshot.val().Electronic_devices_and_instrumentation_laboratory;
+                    document.getElementById('s1_road1').value = snapshot.val().Digital_system_design_laboratory;
+                    document.getElementById('s1_road2').value = snapshot.val().Transform_calculus;
+                    document.getElementById('s1_road3').value = snapshot.val().Additional_mathematics_I;
+
+            });
+        } catch (error) {
+            alert("Some Error Occur " + error.message)
+        }
+
+
+    }
+    function getdata2() {
+        try {
+            firebase.database().ref('Result/Sem3/ECE/IA2/' + usn).once('value', function(snapshot) {
+
+                    document.getElementById('s2_aadhar1').value = snapshot.val().Constitution_of_India;
+                    document.getElementById('s2_aadhar2').value = snapshot.val().Network_theory;
+                    document.getElementById('s2_aadhar3').value = snapshot.val().Electronic_devices;
+                    document.getElementById('s2_mob').value = snapshot.val().Digital_system_design;
+                    document.getElementById('s2_email').value = snapshot.val().Computer_organization_and_architecture;
+                    document.getElementById('s2_flat1').value = snapshot.val().Power_electronics_and_instrumentation;
+                    document.getElementById('s2_flat2').value = snapshot.val().Electronic_devices_and_instrumentation_laboratory;
+                    document.getElementById('s2_road1').value = snapshot.val().Digital_system_design_laboratory;
+                    document.getElementById('s2_road2').value = snapshot.val().Transform_calculus;
+                    document.getElementById('s2_road3').value = snapshot.val().Additional_mathematics_I;
+            });
+        } catch (error) {
+            alert("Some Error Occur " + error.message)
+        }
+
+
+    }
+    function getdata3() {
+        try {
+            firebase.database().ref('Result/Sem3/ECE/IA3/' + usn).once('value', function(snapshot) {
+
+                    document.getElementById('s3_aadhar1').value = snapshot.val().Constitution_of_India;
+                    document.getElementById('s3_aadhar2').value = snapshot.val().Network_theory;
+                    document.getElementById('s3_aadhar3').value = snapshot.val().Electronic_devices;
+                    document.getElementById('s3_mob').value = snapshot.val().Digital_system_design;
+                    document.getElementById('s3_email').value = snapshot.val().Computer_organization_and_architecture;
+                    document.getElementById('s3_flat1').value = snapshot.val().Power_electronics_and_instrumentation;
+                    document.getElementById('s3_flat2').value = snapshot.val().Electronic_devices_and_instrumentation_laboratory;
+                    document.getElementById('s3_road1').value = snapshot.val().Digital_system_design_laboratory;
+                    document.getElementById('s3_road2').value = snapshot.val().Transform_calculus;
+                    document.getElementById('s3_road3').value = snapshot.val().Additional_mathematics_I;
+            });
+        } catch (error) {
+            alert("Some Error Occur " + error.message)
+        }
+    }
+    var s1,s2,s3,s4,s5,s6,s7,s8,s9,s10
+var s11,s21,s31,s41,s51,s61,s71,s81,s91,s101
+var s12,s22,s32,s42,s52,s62,s72,s82,s92,s102
+    function ready() {
+        usn = document.getElementById('s_usn').value;
+        s1 = document.getElementById('s1_aadhar1').value;
+        s2 = document.getElementById('s1_aadhar2').value;
+        s3 = document.getElementById('s1_aadhar3').value;
+        s4 = document.getElementById('s1_mob').value;
+        s5 = document.getElementById('s1_email').value;
+        s6 = document.getElementById('s1_flat1').value;
+        s7 = document.getElementById('s1_flat2').value;
+        s8 = document.getElementById('s1_road1').value;
+        s9 = document.getElementById('s1_road2').value;
+        s10 = document.getElementById('s1_road3').value;
+        s11 = document.getElementById('s2_aadhar1').value;
+        s21 = document.getElementById('s2_aadhar2').value;
+        s31 = document.getElementById('s2_aadhar3').value;
+        s41 = document.getElementById('s2_mob').value;
+        s51 = document.getElementById('s2_email').value;
+        s61 = document.getElementById('s2_flat1').value;
+        s71 = document.getElementById('s2_flat2').value;
+        s81 = document.getElementById('s2_road1').value;
+        s91 = document.getElementById('s2_road2').value;
+        s101 = document.getElementById('s2_road3').value;
+        s12 = document.getElementById('s3_aadhar1').value;
+        s22 = document.getElementById('s3_aadhar2').value;
+        s32 = document.getElementById('s3_aadhar3').value;
+        s42 = document.getElementById('s3_mob').value;
+        s52 = document.getElementById('s3_email').value;
+        s62 = document.getElementById('s3_flat2').value;
+        s72 = document.getElementById('s3_flat2').value;
+        s82 = document.getElementById('s3_road1').value;
+        s92 = document.getElementById('s3_road2').value;
+        s102 = document.getElementById('s3_road3').value;
+}
+    document.getElementById('a_add').onclick = function() {
+            ready();
+            if (usn != "" && usn != "undefined") {
+                firebase.database().ref('Result/Sem3/ECE/IA1/' + usn).update({
+                    Constitution_of_India: s1,
+                    Network_theory: s2,
+                    Electronic_devices: s3,
+                    Digital_system_design: s4,
+                    Computer_organization_and_architecture: s5,
+                    Power_electronics_and_instrumentation: s6,
+                    Electronic_devices_and_instrumentation_laboratory: s7,
+                    Digital_system_design_laboratory: s8,
+                    Transform_calculus:s9,
+                    Additional_mathematics_I: s10
+
+                })
+                firebase.database().ref('Result/Sem3/ECE/IA2/' + usn).update({
+                    Constitution_of_India: s11,
+                    Network_theory: s21,
+                    Electronic_devices: s31,
+                    Digital_system_design: s41,
+                    Computer_organization_and_architecture: s51,
+                    Power_electronics_and_instrumentation: s61,
+                    Electronic_devices_and_instrumentation_laboratory: s71,
+                    Digital_system_design_laboratory: s81,
+                    Transform_calculus:s91,
+                    Additional_mathematics_I: s101
+
+                })
+                firebase.database().ref('Result/Sem3/ECE/IA3/' + usn).update({
+                    Constitution_of_India: s12,
+                    Network_theory: s22,
+                    Electronic_devices: s32,
+                    Digital_system_design: s42,
+                    Computer_organization_and_architecture: s52,
+                    Power_electronics_and_instrumentation: s62,
+                    Electronic_devices_and_instrumentation_laboratory: s72,
+                    Digital_system_design_laboratory: s82,
+                    Transform_calculus:s92,
+                    Additional_mathematics_I: s102
+
+                })
+
+                document.getElementById('student').reset();
+                document.getElementById('contactForm').reset();
+                alert("Data has been Updated");
+            } else {
+                alert("Enter the USN");
+                document.getElementById('student').reset();
+            }
+
+        }
+
+    document.getElementById('a_delete').onclick = function() {
+        ready();
+        if (usn != "") {
+            firebase.database().ref('Result/Sem3/ECE/IA1/' + usn).remove();
+            firebase.database().ref('Result/Sem3/ECE/IA2/' + usn).remove();
+            firebase.database().ref('Result/Sem3/ECE/IA3/' + usn).remove();
+            document.getElementById('student').reset();
+            document.getElementById('contactForm').reset();
+            alert("Student data is Deleted")
+        } else {
+            alert("Enter usn and Search the student first")
+        }
+    }
+                 var sub1, sub2, sub3, sub4, sub5, sub6, sub7, sub8
+                var sub11, sub21, sub31, sub41, sub51, sub61, sub71, sub81
+                var sub12, sub22, sub32, sub42, sub52, sub62, sub72, sub82
+                function getdatag() {
+        try {
+            firebase.database().ref('Result/Sem3/ECE/IA1/' + usn).once('value', function(snapshot) {
+
+                    sub1 = snapshot.val().Constitution_of_India;
+                    sub2 = snapshot.val().Network_theory;
+                    sub3 = snapshot.val().Electronic_devices;
+                    sub4 = snapshot.val().Digital_system_design;
+                    sub5 = snapshot.val().Computer_organization_and_architecture;
+                    sub6 = snapshot.val().Power_electronics_and_instrumentation;
+                    sub7 = snapshot.val().Electronic_devices_and_instrumentation_laboratory;
+                    sub8 = snapshot.val().Digital_system_design_laboratory
+                    sub9 = snapshot.val().Transform_calculus;
+                    sub10 = snapshot.val().Additional_mathematics_I;
+                   graph();
+
+            });
+        } catch (error) {
+            alert("Some Error Occur " + error.message)
+        }
+  
+    try {
+            firebase.database().ref('Result/Sem3/ECE/IA2/' + usn).once('value', function(snapshot) {
+
+                    sub11 = snapshot.val().Constitution_of_India;
+                    sub21 = snapshot.val().Network_theory;
+                    sub31 = snapshot.val().Electronic_devices;
+                    sub41 = snapshot.val().Digital_system_design;
+                    sub51 = snapshot.val().Computer_organization_and_architecture;
+                    sub61 = snapshot.val().Power_electronics_and_instrumentation;
+                    sub71 = snapshot.val().Electronic_devices_and_instrumentation_laboratory;
+                    sub81 = snapshot.val().Digital_system_design_laboratory
+                    sub91 = snapshot.val().Transform_calculus;
+                    sub101 = snapshot.val().Additional_mathematics_I;
+                   graph();
+
+            });
+        } catch (error) {
+            alert("Some Error Occur " + error.message)
+        }
+        try {
+            firebase.database().ref('Result/Sem3/ECE/IA3/' + usn).once('value', function(snapshot) {
+
+                    sub12 = snapshot.val().Constitution_of_India;
+                    sub22 = snapshot.val().Analog_and_Digital_Electronics;
+                    sub32 = snapshot.val().Electronic_devices;
+                    sub42 = snapshot.val().Digital_system_design;
+                    sub52 = snapshot.val().Computer_organization_and_architecture;
+                    sub62 = snapshot.val().Power_electronics_and_instrumentation;
+                    sub72 = snapshot.val().Electronic_devices_and_instrumentation_laboratory;
+                    sub82 = snapshot.val().Digital_system_design_laboratory
+                    sub92 = snapshot.val().Transform_calculus;
+                    sub102 = snapshot.val().Additional_mathematics_I;
+                   graph();
+
+            });
+        } catch (error) {
+            alert("Some Error Occur " + error.message)
+        }
+    }
+    console.log(sub1);
+    function graph(){
+        google.charts.load('current', {'packages':['corechart','bar']});
+      google.charts.setOnLoadCallback(drawStuff);
+      function drawStuff() {
+        var data = new google.visualization.arrayToDataTable([
+          ['Subject', '1st IA Marks', '2nd IA Marks', '3rd IA Marks'],
+          ["Constitution of India", parseInt(sub1),parseInt(sub11),parseInt(sub12)],
+          ["Network theory", parseInt(sub2),parseInt(sub21),parseInt(sub22)],
+          ["Electronic devices", parseInt(sub3),parseInt(sub31),parseInt(sub32)],
+          ["Digital system design", parseInt(sub4),parseInt(sub41),parseInt(sub42)],
+          ['Computer organization and architecture', parseInt(sub5),parseInt(sub51),parseInt(sub52)],
+          ['Power electronics and instrumentation', parseInt(sub6),parseInt(sub61),parseInt(sub62)],
+          ['Electronic devices and instrumentation laboratory', parseInt(sub7),parseInt(sub71),parseInt(sub72)],
+          ['Digital system design laboratory', parseInt(sub8),parseInt(sub81),parseInt(sub82)],
+          ['Transform Calculus', parseInt(sub9),parseInt(sub91),parseInt(sub92)],
+          ['Additional Mathematics I', parseInt(sub10),parseInt(sub101),parseInt(sub102)],
+        ]);
+
+        var options = {
+          title: 'ECE 3rd SEM IA',
+          width: 900,
+          legend: { position: 'none' },
+          chart: { title: 'ECE 3rd SEM IA',
+                   subtitle: 'popularity by Marks' },
+          bars: 'horizontal', // Required for Material Bar Charts.
+          axes: {
+            x: {
+              0: { side: 'top', label: 'Subject'},
+              maxvalue: 30 // Top x-axis.
+            },
+            y: {
+              0: { side: 'top', label: 'Marks'},
+              maxvalue: 30 // Top x-axis.
+            }
+          },
+
+          bar: { groupWidth: "90%" }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('top_x_div'));
+        chart.draw(data, options);
+      };
+
+    }
+     
+</script>
+</html>

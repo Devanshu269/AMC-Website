@@ -1,0 +1,62 @@
+.header-text{
+	margin: 1% 1%;
+	text-align: center;
+	font-family: Montserrat;
+	color: blue;
+}
+
+.my-form{
+	position: absolute;
+		top:10vh;
+background: #fff;
+padding: 30px;
+border-radius: 10px;
+box-shadow: 0px 0px 10px 0px #000;
+}
+
+.container-fluid{
+	margin: 1% 1%;
+}
+
+/* main-body */
+			.row-main{
+				background-color: #f5f5f5;
+			}
+			.card-img-top{
+				padding: 10%;
+			}
+
+			.card-title{
+				text-align: center;
+			}
+
+.inputfield{
+height:20px
+}
+
+.alignleft {
+	margin-top: 1%;
+	margin-left: 16%;
+}
+.alignright {
+	float: right;
+	margin-top: 1%;
+
+	margin-right: 16%;
+}
+/* footer */
+
+.footer-fab{
+  margin: 1% 1%;
+}
+
+.prog-header{
+	margin-left: 2%;
+}
+
+.admin{
+	width: 350px;
+	display: inline-block;
+	text-align: left;
+
+}

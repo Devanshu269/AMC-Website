@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>AMCS Dashboard</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+  <link href="icofont/icofont.min.css" rel="stylesheet">
+     <!-- Font-awesome -->
+       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+       <link href="boxicons/css/boxicons.min.css" rel="stylesheet">
+       <style>
+       body, html {
+       height: 100%;
+       margin: 0;
+       }
+
+       .bg {
+       /* The image used */
+       background-color: #046582;
+
+       /* Full height */
+       height: 20%;
+
+       /* Center and scale the image nicely */
+       background-position: center;
+       background-repeat: no-repeat;
+       background-size: cover;
+       }
+       .header-img{
+         position: absolute;
+         top: 10%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+       }
+.card_a{
+  background-color: #77ACF1;
+}
+.card_b{
+  background-color: #3C8DAD;
+}
+.card_c{
+  background-color: #005A8D;
+}
+.aa{
+  margin: 5px 10px;
+
+}
+
+       </style>
+</head>
+
+<body>
+   <script type="text/javascript">
+  function imageClick(url) {
+      window.location ="datatable_t/studentdt.html";
+  }
+  function imageClick1(url) {
+      window.location ="datatable_t/parentdt.html";
+  }
+  function imageClick2(url) {
+      window.location ="datatable_t/admissiondt.html";
+  }
+  function imageClick3(url) {
+      window.location ="datatable_t/educationdt.html";
+  }
+  function imageClick4(url) {
+      window.location ="datatable_t/feesdt.html";
+  }
+  function imageClick5(url) {
+      window.location ="datatable_t/hosteldt.html";
+  }
+  function imageClick6(url) {
+      window.location ="datatable_t/transportdt.html";
+  }
+  function imageClick7(url) {
+      window.location ="results_st.html";
+  }
+
+  </script>
+
+  <!-- <div class="d-flex" id="wrapper">
+
+     Sidebar
+    <div class=" bg border-right" id="sidebar-wrapper">
+      <a href="Admin_login.html">
+        <img src = "images/logo.png" width="140px" height="110px" class="logo-pic rounded-circle" margin="30px"/>
+      </a>
+      <div class="sidebar-heading"><h3>Welcome User</h3></div>
+      <div class="list-group list-group-flush">
+        <a href="Home_page.html"  class=" home"><i class="bx bx-home"></i><span> Home</span></a>
+        <a href="#" class="home "><i class="bx bx-user"></i><span> Students</span></a>
+        <a href="#" class="home  "><i class="fas fa-clipboard-check"></i><span> Courses</span></a>
+        <a href="#" class="home  "><i class="bx bx-book-content"></i><span> Subjects</span></a>
+        <a href="#" class="home "><i class="fas fa-bullhorn"></i><span> Announcements</span></a>
+        <a href="#" class="home  "><i class="fas fa-address-card"></i><span> Admission Request</span></a>
+        <a href="#" class="home  "><i class="fas fa-lock"></i><span> Update Password</span></a>
+      </div>
+    </div>  -->
+    <!-- /#sidebar-wrapper -->
+    <div class="d-flex" id="wrapper">
+
+       <!-- Sidebar -->
+       <div class=" bg border-right" id="sidebar-wrapper">
+         <a href="Admin_login.html">
+           <img src = "images/logo.png" width="140px" height="110px" class="logo-pic rounded-circle" margin="30px"/>
+         </a>
+         <div class="sidebar-heading"><h3>Welcome User</h3></div>
+         <div class="list-group list-group-flush">
+           <a href="Home_page.html"  class=" home"><label><i class="bx bx-home"></i><span> Home</span></label></a>
+           <!-- <a href="#" class="home "><i class="bx bx-user"></i><span> Students</span></a> -->
+           <!-- <a href="#" class="home  "><i class="fas fa-clipboard-check"></i><span> Courses</span></a>
+           <a href="#" class="home  "><i class="bx bx-book-content"></i><span> Subjects</span></a> -->
+           <a href="announcement.html" class="home "><label><i class="fas fa-bullhorn"></i><span> Announcements</span></label></a>
+           <a href="#" class="home  "><label><i class="fas fa-address-card"></i><span> Request</span></label></a>
+           <a href="#" class="home  "><label><i class="fas fa-lock"></i> Update Password</label></a>
+           <a href="Concern_page.html" class="home  "> <label><i class="fas fa-question-circle"></i>  Raise a Concern</label></a>
+
+         </div>
+       </div>
+       <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <!-- <div class="bg"> <img src="images/logo.png" class="header-img" style="width:200px; height:100px;" alt=""></div> -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <a class="navbar-brand" href="#">College Management System | AMCS Dashboard</a>
+        <!-- <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button> -->
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <!-- <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li> -->
+            <!-- <li class="nav-item dropdown"> -->
+              <li class="nav-item active">
+                <a href="Home_page.html" class="btn btn-light" tabindex="-1" role="button" aria-disabled="true"><img src="images/back.png" width="20px" height="20px"></img></a>
+              </li>
+              <!-- <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button> -->
+              <!-- <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div> -->
+            <!-- </li> -->
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+        <div><br></div>
+        <div class="text-center ">
+          <!--<h1 class="mt-4">Admin Dashboard</h1>-->
+          <h2 class="adad"  >DASHBOARD</h2>
+        </div>
+        <div><br></div>
+        <div class="row row-cols-1 row-cols-md-3 row-main">
+          <div class="col mb-4">
+            <div class="card card_a text-center" onclick="imageClick('studentdt.html')">
+
+            <!-- <img src="images/blue.jpg" width="60" height="160" class="card-img-top" alt="..." onclick="imageClick('studentdt.html')" /> -->
+            <img src="images/stud1.png" class="aa" width="90"  height="160" alt="">
+              <p class="top-left" style="left: 120px; top: 80px;">  Student Information</p>
+
+
+            <!-- <h4 class="card-title" >COURSES</h4> -->
+              <!-- <a href="Student-Details.html" class="btn btn-light main-body-btn"></a> -->
+              <!-- <div class="card-body text-center">
+                <h5 class="card-title">STUDENT DETAILS</h5>
+        				<a href="Student-Details.html" class="btn btn-primary main-body-btn">Open</a> -->
+        			 </div>
+        		</div>
+
+        	<!-- parents -->
+          <div class="col mb-4">
+            <div class="card card_a text-center" onclick="imageClick1('parentdt.html')" >
+             <img src="images/parents.png" class="aa" width="90"  height="160" alt="">
+              <p class="top-left" style="left: 120px; top: 80px;">Parent Details</p>
+              <!-- <div class="card-body text-center">
+                <h4 class="card-title">SUBJECTS</h4>-->
+        				<!-- <a href="Parent-Details.html" class="btn btn-light main-body-btn"></a>
+            <! </div> -->
+          </div>
+        </div>
+        	<!-- education -->
+          <div class="col mb-4">
+            <div class="card card_a text-center" onclick="imageClick2('admissiondt.html')">
+            <img src="images/admiss1.png" class="aa" width="90"  height="160" alt="">
+             <p class="top-left" style="left: 120px; top: 80px;">Admission Details</p>
+              <!-- <div class="card-body text-center">
+                <h4 class="card-title">STUDENTS</h4>-->
+        				<!-- <a href="bdetails.html" class="btn btn-light main-body-btn"><h6>Open</h6></a> -->
+              <!-- </div> -->
+            </div>
+          </div>
+        	<!-- admission -->
+          <!-- <div class="col mb-3">
+            <div class="card">
+              <img src="image/admissions.png" width="80" height="220" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title">ADMISSION DETAILS</h5>
+        				<a href="Admission-Details.html" class="btn btn-primary main-body-btn">Open</a>
+              </div>
+            </div>
+          </div> -->
+
+        <!-- Column-elements-2 -->
+
+        		<!-- fee -->
+            <div class="col mb-4">
+              <div class="card card_b text-center" onclick="imageClick3('edetails.html')">
+              <img src="images/ed1.png" class="aa" width="90"  height="160" alt="">
+                <p class="top-left" style="left: 120px; top:80px;">Education Details</p>
+                <!-- <div class="card-body text-center">
+                  <h4 class="card-title">ADMISSION REQUEST</h4>-->
+                  <!-- <a href="Transportation-Details.html" class="btn btn-light main-body-btn"></a>
+                <!</div> -->
+            </div>
+            </div>
+        	<div class="col mb-4">
+        	  <div class="card card_b text-center" onclick="imageClick4('fdetails.html')">
+             <img src="images/fees.png" class="aa" width="90"  height="160" alt="">
+              <p class="top-left" style="left: 120px; top: 80px;">Fee Details</p>
+        			<!-- <div class="card-body text-center">
+        				<h4 class="card-title">NEW ANNOUNCEMENTS</h4>-->
+        				<!-- <a href="Fee-Details.html" class="btn btn-light main-body-btn"></a> -->
+        			<!-- </div> -->
+        		</div>
+        	</div>
+        	<!-- hostel -->
+        	<div class="col mb-4">
+        	<div class="card card_b text-center"onclick="imageClick5('hdetails.html')" >
+        		 <img src="images/hos2.png" class="aa"width="90"  height="160" alt="">
+              <p class="top-left" style="left: 120px; top: 80px;"> Hostel Details</p>
+        			<!-- <div class="card-body text-center">
+        				<h4 class="card-title">UPDATE PASSWORD</h4>-->
+        				<!-- <a href="Hostel-Details.html" class="btn btn-light main-body-btn"></a> -->
+        			<!-- </div> -->
+        		</div>
+        	</div>
+        	<!-- transportation -->
+
+        	<!-- others -->
+         <div class="col mb-3">
+           <div class="card card_c text-center" onclick="imageClick6('tdetails.html')">
+             <img src="images/trans.png" class="aa"width="90"  height="160" alt="">
+             <p class="top-left" style="left: 120px; top: 80px;"> Transport Details</p>
+
+        			</div>
+        		</div>
+            <div class="col mb-3">
+              <div class="card card_c text-center" onclick="imageClick7('tdetails.html')">
+                <img src="images/res.png"class="aa" width="90"  height="160" alt="">
+                <p class="top-left" style="left: 120px; top: 80px;"> Result Analysis</p>
+
+           			</div>
+           		</div>
+        	</div>
+        </div>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
+</body>
+
+</html>

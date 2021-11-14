@@ -1,0 +1,143 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- <script type="text/javascript">
+
+    </script> -->
+  </head>
+  <body>
+      <label for= "usn">Student USN</label>
+      <input type="text" for= "usn" id="usn">
+    <button type="button" id="a_get" > Show</button>
+    <div id="top_x_div" style="width: 900px; height: 500px;"></div>
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-database.js"></script>
+  </body>
+<script>
+        var firebaseConfig = {
+        apiKey: "AIzaSyAdWq4-ZE4Yv87w_AEyy5b5JwkW9A8iL3U",
+        authDomain: "contact-form-38b0b.firebaseapp.com",
+        projectId: "contact-form-38b0b",
+        storageBucket: "contact-form-38b0b.appspot.com",
+        messagingSenderId: "748179068137",
+        appId: "1:748179068137:web:5d99c5e7b8012158990c78",
+        measurementId: "G-KTGWG17W1K"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    var dataSet
+    var USN
+    var Name
+    var Student_Section
+    var sub1, sub2, sub3, sub4, sub5, sub6, sub7, sub8
+   
+    var usn
+    document.getElementById('a_get').onclick = function() {
+        usn = document.getElementById("usn").value;
+        if (usn == "") {
+            alert("Enter the USN");
+            // document.getElementById('student').reset();
+        } else {
+                getdata1();
+
+        }
+    }
+    function getdata1() {
+        try {
+            firebase.database().ref('Result/Sem8/CSE/IA1/' + usn).once('value', function(snapshot) {
+
+                    sub1 = snapshot.val().Internet_of_things;
+                    sub2 = snapshot.val().Professional_elective_4;
+                    sub3 = snapshot.val().Project_work_phase_2;
+                    sub4 = snapshot.val().Technical_seminar;
+                    sub5 = snapshot.val().Internship;
+ 
+
+                   graph();
+
+            });
+        } catch (error) {
+            alert("Some Error Occur " + error.message)
+        }
+  
+    try {
+            firebase.database().ref('Result/Sem8/CSE/IA2/' + usn).once('value', function(snapshot) {
+
+                    sub11 = snapshot.val().Internet_of_things;
+                    sub21 = snapshot.val().Professional_elective_4;
+                    sub31 = snapshot.val().Project_work_phase_2;
+                    sub41 = snapshot.val().Technical_seminar;
+                    sub51 = snapshot.val().Internship;
+;
+     
+                   graph();
+
+            });
+        } catch (error) {
+            alert("Some Error Occur " + error.message)
+        }
+        try {
+            firebase.database().ref('Result/Sem8/CSE/IA3/' + usn).once('value', function(snapshot) {
+
+                    sub12 = snapshot.val().Internet_of_things;
+                    sub22 = snapshot.val().Professional_elective_4;
+                    sub32 = snapshot.val().Project_work_phase_2;
+                    sub42 = snapshot.val().Technical_seminar;
+                    sub52 = snapshot.val().Internship;
+         
+                   graph();
+
+            });
+        } catch (error) {
+            alert("Some Error Occur " + error.message)
+        }
+    }
+    console.log(sub1);
+    function graph(){
+        google.charts.load('current', {'packages':['corechart','bar']});
+      google.charts.setOnLoadCallback(drawStuff);
+      function drawStuff() {
+        var data = new google.visualization.arrayToDataTable([
+          ['Subject', '1st IA Marks', '2nd IA Marks', '3rd IA Marks'],
+          ["Internet of things", parseInt(sub1),parseInt(sub11),parseInt(sub12)],
+          ["Professional IVlective IV", parseInt(sub2),parseInt(sub21),parseInt(sub22)],
+          ["Project work phase 2", parseInt(sub3),parseInt(sub31),parseInt(sub32)],
+          ["Technical seminar", parseInt(sub4),parseInt(sub41),parseInt(sub42)],
+          ['Internship', parseInt(sub5),parseInt(sub51),parseInt(sub52)],
+                  
+          
+        ]);
+
+        var options = {
+          title: 'CSE 8th SEM IA',
+          width: 900,
+          legend: { position: 'none' },
+          chart: { title: 'CSE 8th SEM IA',
+                   subtitle: 'popularity by Marks' },
+          bars: 'horizontal', // Required for Material Bar Charts.
+          axes: {
+            x: {
+              0: { side: 'top', label: 'Subject'},
+              maxvalue: 30 // Top x-axis.
+            },
+            y: {
+              0: { side: 'top', label: 'Marks'},
+              maxvalue: 30 // Top x-axis.
+            }
+          },
+
+          bar: { groupWidth: "90%" }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('top_x_div'));
+        chart.draw(data, options);
+      };
+
+    }
+     
+</script>
+</html>
+
+//1AM17CS049

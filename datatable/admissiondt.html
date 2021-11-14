@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Admin Data Entry and Data Table</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link href="../css/simple-sidebar.css" rel="stylesheet">
+    <link href="../icofont/icofont.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="../css/mysecond.css">
+    <!-- Font-awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link href="../boxicons/css/boxicons.min.css" rel="stylesheet">
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+
+    <script src="jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="datatables.css">
+
+    <script type="text/javascript" charset="utf8" src="datatables.js"></script>
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <!-- Custom styles for this template -->
+    <!-- <link href="../css/simple-sidebar.css" rel="stylesheet"> -->
+    <!-- <link href="icofont/icofont.min.css" rel="stylesheet"> -->
+
+    <script type="text/javascript" charset="utf8" src="datatables.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.7.0/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+        }
+        .btn-tb {
+            position: absolute;
+            top: 20%;
+            left: 97%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light big-logo">
+  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+   <span class="navbar-toggler-icon"></span>
+  </button> -->
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+   <img src="../images/AMC_engg_college_blue.png" alt="" width="230px"; height="100px";>
+ </div>
+</nav>
+
+    <div class="heading-title">
+        <h3 class="" href="#">Admission Details | DataTable</h3>
+        <a href="../admin_data.html" class="btn btn-light btn-tb" tabindex="-1" role="button" aria-disabled="true"><img src="../images//back.png" width="20px" height="20px"></img>
+        </a>
+    </div>
+    <br>
+    <p class="wrapper"> Criterions &nbsp;&nbsp;&nbsp;
+    <!-- <label>
+        <input type="checkbox" id="CETrank"> CET rank smaller than 5000
+       </label>&nbsp;&nbsp;&nbsp; -->
+    <label>
+        <input type="checkbox" id="COMEDKrank"> Management only
+       </label>&nbsp;&nbsp;&nbsp;
+    <label>
+        <input type="checkbox" id="COMEDK"> COMEDK only
+       </label>&nbsp;&nbsp;&nbsp;
+
+    <label>
+        <input type="checkbox" id="CET"> CET only
+       </label>&nbsp;&nbsp;&nbsp;
+       </p>
+
+    <p class="wrapper"> Branch Filter &nbsp;&nbsp;&nbsp;
+        <label>
+        <input type="checkbox" id="cse"> CSE
+       </label>&nbsp;&nbsp;&nbsp;
+        <label>
+        <input type="checkbox" id="ece"> ECE
+       </label>&nbsp;&nbsp;&nbsp;
+        <label>
+        <input type="checkbox" id="civil"> CIVIL
+       </label>&nbsp;&nbsp;&nbsp;
+        <label>
+        <input type="checkbox" id="mech"> MECH
+       </label>&nbsp;&nbsp;&nbsp;
+    </p>
+
+    <p class="wrapper"> Semester Filter&nbsp;&nbsp;&nbsp;
+        <label>
+            <input type="checkbox" id="sem1"> Sem  1
+           </label>&nbsp;&nbsp;&nbsp;
+           <label>
+            <input type="checkbox" id="sem2"> Sem  2
+           </label>&nbsp;&nbsp;&nbsp;
+        <label>
+        <input type="checkbox" id="sem3"> Sem  3
+       </label>&nbsp;&nbsp;&nbsp;
+        <label>
+           <input type="checkbox" id="sem4"> Sem  4
+          </label>&nbsp;&nbsp;&nbsp;
+        <label>
+              <input type="checkbox" id="sem5"> Sem  5
+             </label>&nbsp;&nbsp;&nbsp;
+        <label>
+                 <input type="checkbox" id="sem6"> Sem  6
+                </label>&nbsp;&nbsp;&nbsp;
+        <label>
+        <input type="checkbox" id="sem7"> Sem  7
+       </label>&nbsp;&nbsp;&nbsp;
+        <label>
+           <input type="checkbox" id="sem8"> Sem  8
+          </label>&nbsp;&nbsp;&nbsp;
+    </p>
+    <p class="wrapper"> Semester Filter&nbsp;&nbsp;&nbsp;
+        <label>
+            <input type="checkbox" id="secA"> A
+           </label>&nbsp;&nbsp;&nbsp;
+           <label>
+            <input type="checkbox" id="secB"> B
+           </label>&nbsp;&nbsp;&nbsp;
+        <label>
+        <input type="checkbox" id="secC"> C
+       </label>&nbsp;&nbsp;&nbsp;
+        <label>
+           <input type="checkbox" id="secD"> D
+          </label>&nbsp;&nbsp;&nbsp;
+    </p>
+    <div class="container-fluid">
+        <a href="../retrive/retrive_admission.html"type="button" class="btn btn-primary text-dark font-weight-bold" name="download" id="download">Update/Delete</a>
+    </div>
+    <br>
+    <div id='invoice'>
+        <table id="user_data" class="display" width="100%" cellspacing="0">
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+    <!-- <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.js"></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.0/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.print.min.js"></script>
+    <script src="https://cdn.datatables.net/select/1.3.3/js/dataTables.select.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-storage.js"></script>
+    <script src="js/admissiondt.js"></script>
+</body>
+
+</html>

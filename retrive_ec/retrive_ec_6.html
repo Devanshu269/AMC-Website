@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ECE 6th SEM Marks Details</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- Google-fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css1/style_retrieve.css">
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/simple-sidebar.css" rel="stylesheet">
+    <link href="../icofont/icofont.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/mysecond.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Custome PDF download-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+        }
+
+        .bg {
+            /* The image used */
+            background-color: #046582;
+            /* Full height */
+            height: 20%;
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        body {
+            background-color: #edeef7;
+        }
+
+        .header-text {
+            position: absolute;
+            top: 23%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.8rem;
+            padding: 2%;
+        }
+
+        .header-img {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .img-stud {
+            position: absolute;
+            top: 37%;
+            left: 78%;
+            transform: translate(-50%, -50%);
+        }
+
+        #st {
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+        }
+
+        #tct,
+        #cct {
+            height: 400px;
+            width: 400px;
+            border: 2px solid black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light big-logo">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+   <span class="navbar-toggler-icon"></span>
+  </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <img src="../images/AMC_engg_college_blue.png" alt="" width="230px" ; height="100px" ;>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" id="a_get" role="button">Search</a>
+                </li>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Results</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="retrive_ec_1.html">SEM 1</a>
+                          <a class="dropdown-item" href="retrive_ec_2.html">SEM 2</a>
+                          <a class="dropdown-item" href="retrive_ec_3.html">SEM 3</a>
+                          <a class="dropdown-item" href="retrive_ec_4.html">SEM 4</a>
+                          <a class="dropdown-item" href="retrive_ec_5.html">SEM 5</a>
+                          <a class="dropdown-item" href="retrive_ec_6.html">SEM 6</a>
+                          <a class="dropdown-item" href="retrive_ec_7.html">SEM 7</a>
+                          <a class="dropdown-item" href="retrive_ec_8.html">SEM 8</a>
+                      </div>
+                  </li>
+              </ul>
+              <li class="nav-item">
+                  <a class=" nav-link" role="button" id="downloadPDF">Download</a>
+              </li>
+              <li class="nav-item">
+                     <a class="nav-link" href="../retrive_s/retrive_student.html">Back</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <hr style="height:2px;border-width: 0;color:green;background-color:lightblue">
+    <div class="contact">
+        <h3>Enter information</h3>
+        <form id="contactForm">
+            <!-- <p>
+                <label>Name</label>
+                <input type="text" name="s_fname" id="s_fname" required>
+            </p> -->
+            <p>
+                <label for="">USN</label>
+                <input type="text" name="s_usn" id="s_usn" required>
+            </p>
+
+            <!-- <p class="full">
+                        <button type="button" onclick="getdata();">Get</button>
+                    </p> -->
+
+        </form>
+        <br>
+        <br>
+
+
+        <form id="student">
+          <div class="">
+
+            <h5>INTERNAL 1</h5>
+            <br>
+            <!-- <p>
+                <label>USN</label>
+                <input type="text" id="s2_usn">
+
+            </p> -->
+            <p>
+                <label>Digital communication:</label>
+                <input type="text" id="s1_aadhar1" disabled>
+            </p>
+            <p><label for="">Embedded systems:</label>
+                <input type="text" id="s1_aadhar2" disabled>
+                <strong id="s1_aadhar2"></strong>
+            </p>
+            <p>
+                <label>Microwave and antennas:</label>
+                <input type="text" id="s1_aadhar3" disabled>
+                <!-- <strong id="s_sem"></strong> -->
+            </p>
+            <p>
+                <label>Professional elective-I:</label>
+                <input type="text" id="s1_mob" disabled>
+            </p>
+            <p>
+                <label>Open elective-A:</label>
+                <input type="text" id="s1_email" disabled>
+                <!-- <strong id="s_year"></strong> -->
+            </p>
+            <p>
+                <label>Embedded system Laboratory:</label>
+                <input type="text" id="s1_flat1" disabled>
+                <!-- <strong id="s_email"></strong> -->
+
+            </p>
+            <p>
+                <label>Communication laboratory:</label>
+                <input type="text" id="s1_flat2" disabled>
+                <!-- <strong id="s_aadhar"></strong> -->
+            </p>
+
+            <br>
+        <br>
+
+      </div>
+      <div class="">
+
+
+          <H5>INTERNAL 2</H5>
+          <br>
+          <p>
+            <label>Digital communication:</label>
+            <input type="text" id="s2_aadhar1" disabled>
+        </p>
+        <p><label for="">Embedded systems:</label>
+            <input type="text" id="s2_aadhar2" disabled>
+            <strong id="s2_aadhar2"></strong>
+        </p>
+        <p>
+            <label>Microwave and antennas:</label>
+            <input type="text" id="s2_aadhar3" disabled>
+            <!-- <strong id="s_sem"></strong> -->
+        </p>
+        <p>
+            <label>Professional elective-I:</label>
+            <input type="text" id="s2_mob" disabled>
+        </p>
+        <p>
+            <label>Open elective-A:</label>
+            <input type="text" id="s2_email" disabled>
+            <!-- <strong id="s_year"></strong> -->
+        </p>
+        <p>
+            <label>Embedded system Laboratory:</label>
+            <input type="text" id="s2_flat1" disabled>
+            <!-- <strong id="s_email"></strong> -->
+
+        </p>
+        <p>
+            <label>Communication laboratory:</label>
+            <input type="text" id="s2_flat2" disabled>
+            <!-- <strong id="s_aadhar"></strong> -->
+        </p>
+        <br>
+        <br>
+          </div>
+          <div class="">
+
+
+<h5>INTERNAL 3</h5><br>
+<p>
+    <label>Digital communication:</label>
+    <input type="text" id="s3_aadhar1" disabled>
+</p>
+<p><label for="">Embedded systems:</label>
+    <input type="text" id="s3_aadhar2" disabled>
+    <strong id="s3_aadhar2"></strong>
+</p>
+<p>
+    <label>Microwave and antennas:</label>
+    <input type="text" id="s3_aadhar3" disabled>
+    <!-- <strong id="s_sem"></strong> -->
+</p>
+<p>
+    <label>Professional elective-I:</label>
+    <input type="text" id="s3_mob" disabled>
+</p>
+<p>
+    <label>Open elective-A:</label>
+    <input type="text" id="s3_email" disabled>
+    <!-- <strong id="s_year"></strong> -->
+</p>
+<p>
+    <label>Embedded system Laboratory:</label>
+    <input type="text" id="s3_flat1" disabled>
+    <!-- <strong id="s_email"></strong> -->
+
+</p>
+<p>
+    <label>Communication laboratory:</label>
+    <input type="text" id="s3_flat2" disabled>
+    <!-- <strong id="s_aadhar"></strong> -->
+</p>
+</div>
+        </form>
+        <br>
+        <br>
+        <div id="top_x_div" style="width: 900px; height: 500px;"></div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-database.js"></script>
+</body>
+<script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyAdWq4-ZE4Yv87w_AEyy5b5JwkW9A8iL3U",
+        authDomain: "contact-form-38b0b.firebaseapp.com",
+        projectId: "contact-form-38b0b",
+        storageBucket: "contact-form-38b0b.appspot.com",
+        messagingSenderId: "748179068137",
+        appId: "1:748179068137:web:5d99c5e7b8012158990c78",
+        measurementId: "G-KTGWG17W1K"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    var usn
+    document.getElementById('a_get').onclick = function() {
+        usn = document.getElementById("s_usn").value;
+        if (usn == "") {
+            alert("Enter the USN");
+            // document.getElementById('student').reset();
+        } else {
+            getdatag();
+                getdata1();
+                getdata2();
+                getdata3();
+        }
+    }
+    function getdata1() {
+        try {
+            firebase.database().ref('Result/Sem6/ECE/IA1/' + usn).once('value', function(snapshot) {
+
+                    document.getElementById('s1_aadhar1').value = snapshot.val().Digital_communication;
+                    document.getElementById('s1_aadhar2').value = snapshot.val().Embedded_systems;
+                    document.getElementById('s1_aadhar3').value = snapshot.val().Microwave_and_antennas;
+                    document.getElementById('s1_mob').value = snapshot.val().Professional_elective_I;
+                    document.getElementById('s1_email').value = snapshot.val().Open_elective_A;
+                    document.getElementById('s1_flat1').value = snapshot.val().Embedded_system_Laboratory;
+                    document.getElementById('s1_flat2').value = snapshot.val().Communication_Laboratory;
+                   
+
+
+            });
+        } catch (error) {
+            alert("Some Error Occur " + error.message)
+        }
+
+
+    }
+    function getdata2() {
+        try {
+            firebase.database().ref('Result/Sem6/ECE/IA2/' + usn).once('value', function(snapshot) {
+
+                    document.getElementById('s2_aadhar1').value = snapshot.val().Digital_communication;
+                    document.getElementById('s2_aadhar2').value = snapshot.val().Embedded_systems;
+                    document.getElementById('s2_aadhar3').value = snapshot.val().Microwave_and_antennas;
+                    document.getElementById('s2_mob').value = snapshot.val().Professional_elective_I;
+                    document.getElementById('s2_email').value = snapshot.val().Open_elective_A;
+                    document.getElementById('s2_flat1').value = snapshot.val().Embedded_system_Laboratory;
+                    document.getElementById('s2_flat2').value = snapshot.val().Communication_Laboratory;
+                    
+            });
+        } catch (error) {
+            alert("Some Error Occur " + error.message)
+        }
+
+
+    }
+    function getdata3() {
+        try {
+            firebase.database().ref('Result/Sem6/ECE/IA3/' + usn).once('value', function(snapshot) {
+
+                    document.getElementById('s3_aadhar1').value = snapshot.val().Digital_communication;
+                    document.getElementById('s3_aadhar2').value = snapshot.val().Embedded_systems;
+                    document.getElementById('s3_aadhar3').value = snapshot.val().Microwave_and_antennas;
+                    document.getElementById('s3_mob').value = snapshot.val().Professional_elective_I;
+                    document.getElementById('s3_email').value = snapshot.val().Open_elective_A;
+                    document.getElementById('s3_flat1').value = snapshot.val().Embedded_system_Laboratory;
+                    document.getElementById('s3_flat2').value = snapshot.val().Communication_Laboratory;
+                    
+            });
+        } catch (error) {
+            alert("Some Error Occur " + error.message)
+        }
+
+
+    }
+                 var sub1, sub2, sub3, sub4, sub5, sub6, sub7
+                var sub11, sub21, sub31, sub41, sub51, sub61, sub71
+                var sub12, sub22, sub32, sub42, sub52, sub62, sub72
+                function getdatag() {
+        try {
+            firebase.database().ref('Result/Sem6/ECE/IA1/' + usn).once('value', function(snapshot) {
+
+                    sub1 = snapshot.val().Digital_communication;
+                    sub2 = snapshot.val().Embedded_systems;
+                    sub3 = snapshot.val().Microwave_and_antennas;
+                    sub4 = snapshot.val().Professional_elective_I;
+                    sub5 = snapshot.val().Open_elective_A;
+                    sub6 = snapshot.val().Embedded_system_Laboratory;
+                    sub7 = snapshot.val().Communication_Laboratory;
+                    
+                   graph();
+
+            });
+        } catch (error) {
+            alert("Some Error Occur " + error.message)
+        }
+  
+    try {
+            firebase.database().ref('Result/Sem6/ECE/IA2/' + usn).once('value', function(snapshot) {
+
+                    sub11 = snapshot.val().Digital_communication;
+                    sub21 = snapshot.val().Embedded_systems;
+                    sub31 = snapshot.val().Microwave_and_antennas;
+                    sub41 = snapshot.val().Professional_elective_I;
+                    sub51 = snapshot.val().Open_elective_A;
+                    sub61 = snapshot.val().Embedded_system_Laboratory;
+                    sub71 = snapshot.val().Communication_Laboratory;
+                    
+                   graph();
+
+            });
+        } catch (error) {
+            alert("Some Error Occur " + error.message)
+        }
+        try {
+            firebase.database().ref('Result/Sem6/ECE/IA3/' + usn).once('value', function(snapshot) {
+
+                    sub12 = snapshot.val().Digital_communication;
+                    sub22 = snapshot.val().Embedded_systems;
+                    sub32 = snapshot.val().Microwave_and_antennas;
+                    sub42 = snapshot.val().Professional_elective_I;
+                    sub52 = snapshot.val().Open_elective_A;
+                    sub62 = snapshot.val().Embedded_system_Laboratory;
+                    sub72 = snapshot.val().Communication_Laboratory;
+                    
+                   graph();
+
+            });
+        } catch (error) {
+            alert("Some Error Occur " + error.message)
+        }
+    }
+    console.log(sub1);
+    function graph(){
+        google.charts.load('current', {'packages':['corechart','bar']});
+      google.charts.setOnLoadCallback(drawStuff);
+      function drawStuff() {
+        var data = new google.visualization.arrayToDataTable([
+          ['Subject', '1st IA Marks', '2nd IA Marks', '3rd IA Marks'],
+          ["Digital communication", parseInt(sub1),parseInt(sub11),parseInt(sub12)],
+          ["Embedded systems", parseInt(sub2),parseInt(sub21),parseInt(sub22)],
+          ["Microwave and antennas", parseInt(sub3),parseInt(sub31),parseInt(sub32)],
+          ["Professional Elective I", parseInt(sub4),parseInt(sub41),parseInt(sub42)],
+          ['Open Elective A', parseInt(sub5),parseInt(sub51),parseInt(sub52)],
+          ['Embedded system Laboratory', parseInt(sub6),parseInt(sub61),parseInt(sub62)],
+          ['Communication Laboratory', parseInt(sub7),parseInt(sub71),parseInt(sub72)],
+
+        ]);
+
+        var options = {
+          title: 'ECE 6th SEM IA',
+          width: 900,
+          legend: { position: 'none' },
+          chart: { title: 'ECE 6th SEM IA',
+                   subtitle: 'popularity by Marks' },
+          bars: 'horizontal', // Required for Material Bar Charts.
+          axes: {
+            x: {
+              0: { side: 'top', label: 'Subject'},
+              maxvalue: 30 // Top x-axis.
+            },
+            y: {
+              0: { side: 'top', label: 'Marks'},
+              maxvalue: 30 // Top x-axis.
+            }
+          },
+
+          bar: { groupWidth: "90%" }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('top_x_div'));
+        chart.draw(data, options);
+      };
+
+    }
+</script>
+</html>

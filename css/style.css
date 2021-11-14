@@ -1,0 +1,219 @@
+body{
+  line-height: 1;
+
+}
+
+
+
+
+/* ================================================================= */
+/* navabar */
+/* ================================================================= */
+
+
+
+
+.navbar{
+  padding:1% 5%;
+  width: 100%;
+  height: 100%;
+  color: black;
+}
+.nav-item{
+  padding: 0 18px;
+}
+.navbar-brand{
+  /* margin-right:8%; */
+  font-size: 1.7rem;
+}
+/* .navbar-brand1{
+  background-color: #DFEEEA;
+} */
+
+
+/* ================================================================= */
+/* center-header */
+/* ================================================================= */
+
+
+
+.main-header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+  color: #fff;
+}
+.w3-opacity, .w3-hover-opacity:hover {
+    opacity: 0.72;
+}
+.w3-white, .w3-hover-white:hover {
+    color: #000;
+    background-color: #fff;
+}
+.w3-padding-large {
+    padding: 12px 24px;
+}
+
+
+
+
+/* ================================================================= */
+/* body of page */
+/* ================================================================= */
+
+
+
+
+.body-of-page{
+  padding: 3% 0;
+}
+.body-header{
+ text-align: left;
+ width: 80%;
+ margin: 100px auto 100px auto;
+ line-height: 1.5;
+}
+.bodyimage{
+  float: right;
+  margin-right: 20px;
+  width: 40%;
+}
+
+
+
+/* ================================================================= */
+/* footer */
+/* ================================================================= */
+
+
+
+
+.footer-header{
+  margin-top: 3%;
+    padding: 2% 2%;
+}
+.footer-fab{
+  padding: 1% 1%;
+}
+
+
+
+/* ================================================================= */
+/* Admin-login-page */
+/* ================================================================= */
+
+
+/* ================================================================= */
+/* for admin-login */
+/* ================================================================= */
+
+
+
+
+.main-header1 {
+  position: absolute;
+  top: 40%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+
+.main-header2 {
+  position: absolute;
+  top: 45%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+
+/* ================================================================= */
+/* for Admin-login */
+/* ================================================================= */
+
+
+
+
+
+.w2-opacity, .w2-hover-opacity:hover {
+    opacity: 0.75;
+}
+.w2-white, .w2-hover-white:hover {
+    color: #000;
+    background-color: #fff;
+}
+.w2-padding-large {
+    padding: 12px 24px;
+}
+
+
+
+/* ================================================================= */
+/* Form used for sign in, sign up */
+/* ================================================================= */
+
+
+
+.form-check{
+  font-size: 1rem;
+  line-height: 1;
+  padding: 3%;
+}
+
+.form-row{
+  margin-bottom: 3%;
+}
+
+.term{
+  font-size:1rem;
+  margin: 1% 3%;
+}
+
+.btn-group{
+  margin: 1% 1%;
+}
+
+.sm{
+ float: left;
+ line-height: 1;
+ font-size: 1.25rem;
+
+}
+
+.button1{
+  border-radius:10%;
+}
+
+
+
+/* Testimonial-section */
+
+#testimonials{
+  text-align: center;
+  background-color: #39A2DB;
+  color: #fff;
+}
+.testimonial-img{
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+.testimonial-img1{
+  width: 70%;
+
+
+  margin: 20px;
+}
+.carousel-item{
+    padding: 7% 15%;
+}
+
+.testimonial-text{
+  line-height: 1.5;
+  font-size: 3rem;
+}

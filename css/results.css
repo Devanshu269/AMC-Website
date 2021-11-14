@@ -1,0 +1,13 @@
+.result_style{
+  margin: 2%;
+  padding-top: 5%;
+  /* padding: 2% 2%; */
+
+}
+iframe:focus {
+  outline: none;
+}
+
+iframe[seamless] {
+  display: block;
+}

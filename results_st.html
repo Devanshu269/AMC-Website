@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Simple Sidebar - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/simple-sidebar2.css" rel="stylesheet">
+    <link href="css/results.css" rel="stylesheet">
+    <link href="icofont/icofont.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/mysecond.css">
+    <!-- Font-awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link href="boxicons/css/boxicons.min.css" rel="stylesheet">
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+</head>
+
+<body id="mainbody">
+    <script type="text/javascript">
+        function imageClick(url) {
+            window.location = "bdetails.html";
+        }
+    </script>
+
+
+    <!-- Menu Toggle Script -->
+    <script>
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light big-logo">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <img src="images/AMC_engg_college_blue.png" alt="" width="230px" ; height="100px" ;>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="Home_page.html"><span>Home</span></a>
+                    </li>
+
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Marks Retrival</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown" width="-20px";>
+                                <a class="nav-link"  href="retrive_cse_t/retrive_cse_1.html">CSE</a>
+                                <a class="nav-link"  href="retrive_ec_t/retrive_ec_1.html">ECE</a>
+                                <a class="nav-link">MECH</a>
+                                <a class="nav-link">CIVIL</a>
+                                <a class="nav-link">IS</a>
+                                <a class="nav-link">AI</a>
+
+                            </div>
+                        </li>
+                    </ul>
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">DataTables</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="nav-link" href="datatable_cse/datatable_cse_neutral.html">CSE</a>
+                            <a class="nav-link" href="datatable_ec/datatable_ec_neutral.html">ECE</a>
+                        </div>
+                    </li>
+                    <!-- <li class="nav-item ">
+                        <a class="nav-link" href="retrive_cse_t/retrive_cse_1.html"><span>Marks Retrival</span></a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="Admin_Dashboard.html">Back</a>
+                    </li>
+                    <!-- <li class="nav-item">
+        <a class="nav-link" href="#">Log Out</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Button</a>
+      </li> -->
+                </ul>
+            </div>
+        </nav>
+        </nav>
+
+    </div>
+
+    <div class="d-flex" id="wrapper">
+
+        <!-- Sidebar -->
+        <div class=" bg border-right" id="sidebar-wrapper">
+            <!-- <a href="Admin_login.html">
+        <img src = "images/logo.png" width="140px" height="110px" class="logo-pic rounded-circle" margin="30px"/>
+      </a> -->
+            <div class="sidebar-heading">
+                <h3>STUDENT DETAILS</h3>
+            </div>
+            <!-- <div class="list-group list-group-flush">
+        <a href="Home_page.html"  class=" home"><i class="bx bx-home"></i><span> Home</span></a>
+        <a href="#" class="home "><i class="bx bx-user"></i><span> Students</span></a>
+        <a href="#" class="home  "><i class="fas fa-clipboard-check"></i><span> Courses</span></a>
+        <a href="#" class="home  "><i class="bx bx-book-content"></i><span> Subjects</span></a>
+        <a href="#" class="home "><i class="fas fa-bullhorn"></i><span> Announcements</span></a>
+        <a href="#" class="home  "><i class="fas fa-address-card"></i><span> Admission Request</span></a>
+        <a href="#" class="home  "><i class="fas fa-lock"></i><span> Update Password</span></a>
+      </div> -->
+            <form id="sidebar">
+                <div class="form-group">
+                    <div class="sidebar-content-filter sidebar-content">
+
+                        <p class="wrapper"> &nbsp; Branch Filter &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <ul style="width:38%; float:left;">
+                                <li>
+                                    <input type="checkbox" id="cse" value="cse"> CSE
+
+                                </li>
+                                <li><input type="checkbox" id="ece" value="ece"> ECE
+                                </li>
+                            </ul>
+                            <ul style="width:48%; float:left;">
+                                <li>
+                                    <input type="checkbox" id="civil" value="civil"> CIVIL
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="mech" value="mech"> MECH</li>
+                        </p>
+                        </ul>
+                        <p class="wrapper"> &nbsp; Semester Filter&nbsp;
+                            <ul style="width:47%; float:left;">
+                                <li><input type="checkbox" id="sem1" value="sem1"> Sem 1</li>
+                                <li><input type="checkbox" id="sem2" value="sem2"> Sem 2</li>
+                                <li><input type="checkbox" id="sem3" value="sem3"> Sem 3</li>
+                                <li><input type="checkbox" id="sem4" value="sem4"> Sem 4</li>
+                            </ul>
+                            <ul style="width:47%; float:left;">
+                                <li> <input type="checkbox" id="sem5" value="sem5"> Sem 5</li>
+                                <li><input type="checkbox" id="sem6" value="sem6"> Sem 6</li>
+                                <li> <input type="checkbox" id="sem7" value="sem7"> Sem 7</li>
+                                <li> <input type="checkbox" id="sem8" value="sem8"> Sem 8</li>
+                        </p>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <a type="button" class="btn btn-light text-dark font-weight-bold" name="download" id="download" style="width:260px;">Pop</a>
+                    <br>
+                    <br>
+                    <button class="btn btn-light text-dark font-weight-bold" style="width:260px;">Reset</button>
+                </div>
+                <br>
+            </form>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- <div class="container-fluid text-center main">
+          <div class="bimage1">
+
+
+            <div id="divId">
+              <div class="card">
+<img src="images/back.jpg" alt="" width="100%">
+</div>
+</div>
+</div>
+</div> -->
+         <div id="divId" class="result_style_1" width="100%">
+            <iframe src="images/back1.png" height="100% " width="360%" style="border:none;" id="iframee"></iframe>
+        </div>
+        <div id="divId_1" class="result_style"style="display:none;" width="340%">
+              <iframe src="results/cse/cs_c_1.html" height="100% " width="340%" style="border:none;" id="iframee"></iframe>
+          </div>
+        <div id="divId_2" class="result_style"style="display:none;" width="200%">
+                <iframe src="results/cse/cs_c_2.html" height="100% " width="340%" style="border:none;" id="iframee"></iframe>
+            </div>
+        <div id="divId_3" class="result_style"style="display:none;" width="200%">
+                  <iframe src="results/cse/cs_c_3.html" height="100% " width="340%" style="border:none;" id="iframee"></iframe>
+              </div>
+        <div id="divId_4" class="result_style"style="display:none;" width="200%">
+                    <iframe src="results/cse/cs_c_4.html" height="100% " width="340%" style="border:none;" id="iframee"></iframe>
+                </div>
+        <div id="divId_5" class="result_style"style="display:none;" width="200%">
+                      <iframe src="results/cse/cs_c_5.html" height="100% " width="340%" style="border:none;" id="iframee"></iframe>
+                  </div>
+        <div id="divId_6" class="result_style"style="display:none;" width="200%">
+                        <iframe src="results/cse/cs_c_6.html" height="100% " width="340%" style="border:none;" id="iframee"></iframe>
+                    </div>
+        <div id="divId_7" class="result_style"style="display:none;" width="200%">
+                         <iframe src="results/cse/cs_c_7.html" height="100% " width="340%" style="border:none;" id="iframee"></iframe>
+                    </div>
+        <div id="divId_8" class="result_style"style="display:none;" width="200%">
+                         <iframe src="results/cse/cs_c_8.html" height="100% " width="340%" style="border:none;" id="iframee"></iframe>
+                    </div>
+                    <div id="divId_9" class="result_style"style="display:none;" width="200%">
+                       <iframe src="results/ece/ec_c_1.html" height="100% " width="340%" style="border:none;" id="iframee"></iframe>
+                   </div>
+                   <div id="divId_10" class="result_style"style="display:none;" width="200%">
+                    <iframe src="results/ece/ec_c_2.html" height="100% " width="340%" style="border:none;" id="iframee"></iframe>
+               </div>
+               <div id="divId_11" class="result_style"style="display:none;" width="200%">
+                <iframe src="results/ece/ec_c_3.html" height="100% " width="340%" style="border:none;" id="iframee"></iframe>
+           </div>
+           <div id="divId_12" class="result_style"style="display:none;" width="200%">
+            <iframe src="results/ece/ec_c_4.html" height="100% " width="340%" style="border:none;" id="iframee"></iframe>
+       </div>
+       <div id="divId_13" class="result_style"style="display:none;" width="200%">
+        <iframe src="results/ece/ec_c_5.html" height="100% " width="340%" style="border:none;" id="iframee"></iframe>
+   </div>
+   <div id="divId_14" class="result_style"style="display:none;" width="200%">
+    <iframe src="results/ece/ec_c_6.html" height="100% " width="340%" style="border:none;" id="iframee"></iframe>
+</div>
+<div id="divId_15" class="result_style"style="display:none;" width="200%">
+    <iframe src="results/ece/ec_c_7.html" height="100% " width="340%" style="border:none;" id="iframee"></iframe>
+</div>
+<div id="divId_16" class="result_style"style="display:none;" width="200%">
+    <iframe src="results/ece/ec_c_8.html" height="100% " width="340%" style="border:none;" id="iframee"></iframe>
+</div>
+<div id="divId_17" class="result_style"style="display:none;" width="200%">
+    <iframe src="results/ece/ec_c_1.html" height="100% " width="340%" style="border:none;" id="iframee"></iframe>
+</div>
+<div id="divId_18" class="result_style"style="display:none;" width="200%">
+    <iframe src="results/ece/ec_c_2.html" height="100% " width="340%" style="border:none;" id="iframee"></iframe>
+</div>
+<div id="divId_19" class="result_style"style="display:none;" width="200%">
+    <iframe src="results/ece/ec_c_3.html" height="100% " width="340%" style="border:none;" id="iframee"></iframe>
+</div>
+<div id="divId_20" class="result_style"style="display:none;" width="200%">
+    <iframe src="results/ece/ec_c_4.html" height="100% " width="340%" style="border:none;" id="iframee"></iframe>
+</div>
+<div id="divId_21" class="result_style"style="display:none;" width="200%">
+    <iframe src="results/ece/ec_c_5.html" height="100% " width="340%" style="border:none;" id="iframee"></iframe>
+</div>
+<div id="divId_22" class="result_style"style="display:none;" width="200%">
+    <iframe src="results/ece/ec_c_6.html" height="100% " width="340%" style="border:none;" id="iframee"></iframe>
+</div>
+<div id="divId_23" class="result_style"style="display:none;" width="200%">
+    <iframe src="results/ece/ec_c_7.html" height="100% " width="340%" style="border:none;" id="iframee"></iframe>
+</div>
+<div id="divId_24" class="result_style"style="display:none;" width="200%">
+    <iframe src="results/ece/ec_c_8.html" height="100% " width="340%" style="border:none;" id="iframee"></iframe>
+</div>
+<div id="divId_25" class="result_style"style="display:none;" width="200%">
+    <iframe src="results/mech/me_c_1.html" height="100% " width="340%" style="border:none;" id="iframee"></iframe>
+</div>
+<div id="divId_26" class="result_style"style="display:none;" width="200%">
+    <iframe src="results/mech/me_c_2.html" height="100% " width="340%" style="border:none;" id="iframee"></iframe>
+</div>
+
+<div id="divId_27" class="result_style"style="display:none;" width="200%">
+    <iframe src="results/mech/me_c_3.html" height="100% " width="340%" style="border:none;" id="iframee"></iframe>
+</div>
+
+<div id="divId_28" class="result_style"style="display:none;" width="200%">
+    <iframe src="results/mech/me_c_4.html" height="100% " width="340%" style="border:none;" id="iframee"></iframe>
+</div>
+
+<div id="divId_29" class="result_style"style="display:none;" width="200%">
+    <iframe src="results/mech/me_c_5.html" height="100% " width="340%" style="border:none;" id="iframee"></iframe>
+</div>
+
+<div id="divId_30" class="result_style"style="display:none;" width="200%">
+    <iframe src="results/mech/me_c_6.html" height="100% " width="340%" style="border:none;" id="iframee"></iframe>
+</div>
+
+<div id="divId_31" class="result_style"style="display:none;" width="200%">
+    <iframe src="results/mech/me_c_7.html" height="100% " width="340%" style="border:none;" id="iframee"></iframe>
+</div>
+
+<div id="divId_32" class="result_style"style="display:none;" width="200%">
+    <iframe src="results/mech/me_c_8.html" height="100% " width="340%" style="border:none;" id="iframee"></iframe>
+</div>
+
+
+
+        <!-- <script src="https://code.jquery.com/jquery-3.5.1.js "></script>
+        <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js "></script>
+        <script src="https://cdn.datatables.net/buttons/1.7.0/js/dataTables.buttons.min.js "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js "></script>
+        <script src=" https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js "></script>
+        <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.html5.min.js "></script>
+        <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.print.min.js "></script>
+        <script src="https://cdn.datatables.net/select/1.3.3/js/dataTables.select.min.js "></script> -->
+
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js "></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js "></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-database.js "></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-storage.js "></script>
+    <script src="JavaScript/addstudent.js"></script>
+</body>
+
+</html>

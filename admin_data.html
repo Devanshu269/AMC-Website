@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Admin Data Entry and Data Table</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="icofont/icofont.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/mysecond.css">
+    <!-- Font-awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link href="boxicons/css/boxicons.min.css" rel="stylesheet">
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <!-- <script type="text/javascript">
+  function imageClick(url) {
+      window.location ="bdetails.html";
+  }
+
+  </script> -->
+
+
+    <!-- Menu Toggle Script -->
+    <script>
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light big-logo">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <img src="images/AMC_engg_college_blue.png" alt="" width="230px" ; height="100px" ;>
+                <ul class="navbar-nav ml-auto">
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown active">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Update/Delete</a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="retrive/retrive_student.html">Student</a>
+                                    <a class="dropdown-item" href="retrive/retrive_parent.html">Parent</a>
+                                    <a class="dropdown-item" href="retrive/retrive_admission.html">Admission</a>
+                                    <a class="dropdown-item" href="retrive/retrive_education.html">Education</a>
+                                    <a class="dropdown-item" href="retrive/retrive_fee.html">Fee</a>
+                                    <a class="dropdown-item" href="retrive/retrive_hostel.html">Hostel</a>
+                                    <a class="dropdown-item" href="retrive/retrive_transport.html">Transport</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Concern_page.html"><span>Concern</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login_page.html">Log out</a>
+                    </li>
+                    <!-- <section id="title">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg navbar-light ">
+          <a class="navbar-brand" href="#">
+          <img src="images/hospital-img.png" width="130" height="60" class="hospital-image d-inline-block align-top" alt="" loading="lazy"></a> -->
+
+                    <!-- </nav>
+        </div>
+      </section> -->
+                </ul>
+            </div>
+
+        </nav>
+
+    </div>
+    <div class="d-flex" id="wrapper">
+
+        <!-- Sidebar -->
+        <div class=" bg border-right" id="sidebar-wrapper">
+            <!-- <a href="Admin_login.html">
+        <img src = "images/logo.png" width="140px" height="110px" class="logo-pic rounded-circle" margin="30px"/>
+      </a> -->
+            <div class="sidebar-heading">
+                <h3>DATATABLE</h3>
+            </div>
+            <div class="list-group list-group-flush">
+                <a href="datatable/studentdt.html" class=" home"><label><span>Student DataTable</span></label></a>
+                <a href="datatable/parentdt.html" class="home"><label><span>Parent DataTable</span></label></a>
+                <a href="datatable/admissiondt.html" class="home"><label><span>Admission DataTable</span></label></a>
+                <a href="datatable/educationdt.html" class="home"><label><span>Education DataTable</span></label></a>
+                <a href="datatable/feesdt.html" class="home"><label><span>Fee DataTable</span></label></a>
+                <a href="datatable/hosteldt.html" class="home"><label><span>Hostel DataTable</span></label></a>
+                <a href="datatable/transportdt.html" class="home"><label><span>Transport DataTable</span></label></a>
+            </div>
+            <!-- <form>
+      <div class="form-group">
+       <label for="exampleFormControlInput1" class="sidebar-heading1">Name</label>
+        <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Name ">
+        <br>
+
+        <label for="exampleFormControlInput1" class="sidebar-heading1">Prefernce</label>
+        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+          <option selected>Choose...</option> -->
+            <!-- <option value="1">Student</option>
+          <option value="2">Faculty</option>
+        </select>
+         <br>
+
+         <label for="exampleFormControlInput1" class="sidebar-heading1">Hometown</label>
+        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+
+         <option value="AP">Andhra Pradesh</option>
+         <option value="ARP">Arunachal Pradesh</option>
+         <option value="AN">Andaman and Nicobar Islands</option>
+         <option value="AS">Assam</option>
+         <option value="BI">Bihar</option>
+         <option value="CH">Chhattisgarh</option>
+         <option value="CD">Chandigarh</option>
+         <option value="DH">Dehli</option>
+         <option value="DD">Daman and Diu</option>
+         <option value="DN">Dadra and Nagar Haveli</option>
+         <option value="GO">Goa</option>
+         <option value="GU">Gujarat</option>
+         <option value="HY">	Haryana</option>
+         <option value="HP">Himachal Pradesh</option>
+         <option value="JK">Jammu and Kashmir</option>
+         <option value="JH">Jharkhand</option>
+         <option value="KA">Karnataka</option>
+         <option value="KL">Kerala</option>
+         <option value="LW">Lakshadweep</option>
+         <option value="MP">Madhya Pradesh</option>
+         <option value="MH">Maharashtra</option>
+         <option value="MN">Manipur</option>
+         <option value="MG">Meghalaya</option>
+         <option value="MZ">Mizoram</option>
+         <option value="NA">Nagaland</option>
+         <option value="OD">Odisha</option>
+         <option value="PN">Punjab</option>
+         <option value="PO">Pondicherry</option>
+         <option value="RA">Rajasthan</option>
+         <option value="SM">Sikkim</option>
+         <option value="TN">Tamil Nadu</option>
+         <option value="TE">Telangana</option>
+         <option value="TR">Tripura</option>
+         <option value="UP">Uttar Pradesh</option>
+         <option value="UK">Uttarakhand</option>
+         <option value="WB">	West Bengal</option>
+         </select>
+          <br>
+
+      </div>
+    </form> -->
+
+            <form id="student_data">
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <div class="container-fluid text-center main">
+            <div class="bimage1">
+
+
+                <div id="student">
+                    <div class="card">
+
+                        <div class="card-header bg-info">
+                            <a class="btn btn-info" data-toggle="collapse" href="#collapseOne">
+                                <img src="images/student.png" width="50" height="50" class="rounded-circle" alt=""></a>
+                        </div>
+                        <div id="collapseOne" class="collapse collapse-show" data-parent="#student" style="background-color:#bbe1fa;">
+                            <div class="card-body bimage1">
+                                <div class="container-fluid form-group form-inline inputfield prog-header text-center">
+                                    <label for="s_program" class=" font-weight-normal">Program:&nbsp;&nbsp;</label>
+                                    <select name="s_program" id="s_program" class="form-control" style="width: 260px">
+    							<option value="select">                  </option>
+    							<option value="CSE">CSE</option>
+    							<option value="ECE">ECE</option>
+    							<option value="ISE">ISE</option>
+    							<option value="ME">MECHANICAL</option>
+    							<option value="CIVIL">CIVIL</option>
+    							<option value="EEE">EEE</option>
+    							<option value="MT">MECHATRONICS</option>
+    							<option value="AI">AI-ML</option>
+    							<option value="MBA">MBA</option>
+                    			<option value="MCA">MCA</option>
+    						</select>
+                                </div>
+                                <br>
+                                <div class="container-fluid row form-group">
+                                    <div class="col-4 form-inline">
+                                        <label for="s_fname " class=" font-weight-normal">Student  First Name:&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_fname" id="s_fname" class="form-control inputfield" placeholder="First Name" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="s_fname " class=" font-weight-normal">Student  Middle Name:&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_mname" id="s_mname" class="form-control inputfield" placeholder="Middle Name" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="s_fname " class=" font-weight-normal">Student Last Name:&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_lname" id="s_lname" class="form-control inputfield" placeholder="Last Name" style="width:250px; height:30px;">
+                                    </div>
+                                </div>
+
+                                <div class="container-fluid row form-group">
+                                    <div class="col-4 form-inline">
+                                        <label for="s_usn" class=" font-weight-normal">Student USN:&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_usn" id="s_usn" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="s_sem" class=" font-weight-normal">Student Semester:&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_sem" id="s_sem" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="s_section" class=" font-weight-normal">Student section:&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_section" id="s_section" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                </div>
+
+                                <div class="container-fluid row form-group">
+                                    <div class="col-4 form-inline">
+                                        <label for="s_year" class=" font-weight-normal">Year of Admission:&nbsp;&nbsp;</label>
+                                        <select name="s_year" id="s_year" class="form-control" style="width: 250px">
+    							<option value="select">                  </option>
+    							<option value="2019">2019</option>
+    							<option value="2020">2020</option>
+    							<option value="2021">2021</option>
+    							<option value="2022">2022</option>
+    						</select>
+                                    </div>
+
+                                    <div class="col-4 form-inline">
+                                        <label for="s_sex" class=" font-weight-normal">Gender:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                        <select name="s_sex" id="s_sex" class="form-control" style="width: 250px">
+      							<option value="select">                  </option>
+      							<option value="Male">Male</option>
+      							<option value="Female">Female</option>
+      							<option value="Transgender">Trans</option>
+
+      						</select>
+                                    </div>
+
+                                    <div class="col-4 form-inline">
+                                        <label for="s_dob" class=" font-weight-normal">Date of Birth:&nbsp;&nbsp;</label>
+                                        <input type="date" name="s_dob" id="s_dob" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                </div>
+
+                                <div class="container-fluid row form-group">
+                                    <div class="col-4 form-inline">
+                                        <label for="s_mob" class=" font-weight-normal">Mobile Number:&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_mob" id="s_mob" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="s_email" class=" font-weight-normal">Email Id:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                        <input type="email" name="s_email" id="s_email" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="s_aadhar" class=" font-weight-normal">Aadhar Number:&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_aadhar" id="s_aadhar" class="form-control inputfield" style="width:250px; height:30px; ">
+                                    </div>
+                                </div>
+
+                                <div class="container-fluid row form-group">
+                                    <div class="col-4 form-inline">
+                                        <label for="s_flat " class=" font-weight-normal">Permanent Address:&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_flat" id="s_flat" class="form-control inputfield" placeholder="Flat No" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="s_road " class=" font-weight-normal">Road No:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_road" id="s_road" class="form-control inputfield" placeholder="Road No" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="s_area " class=" font-weight-normal">Area:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_area" id="s_area" class="form-control inputfield" placeholder="Area" style="width:250px; height:30px;">
+                                    </div>
+                                </div>
+
+                                <div class="container-fluid row form-group">
+                                    <div class="col-4 form-inline">
+                                        <label for="s_taluk" class=" font-weight-normal">Taluk:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_taluk" id="s_taluk" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="s_district" class=" font-weight-normal">District:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_district" id="s_district" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="s_state" class=" font-weight-normal">State:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                        <select name="s_state" id="s_state" class="form-control" style="width: 250px">
+                <option value="">  </option>
+                <option value="AP">Andhra Pradesh</option>
+                <option value="ARP">Arunachal Pradesh</option>
+                <option value="AN">Andaman and Nicobar Islands</option>
+                <option value="AS">Assam</option>
+                <option value="BI">Bihar</option>
+                <option value="CH">Chhattisgarh</option>
+                <option value="CD">Chandigarh</option>
+                <option value="DH">Dehli</option>
+                <option value="DD">Daman and Diu</option>
+                <option value="DN">Dadra and Nagar Haveli</option>
+                <option value="GO">Goa</option>
+                <option value="GU">Gujarat</option>
+                <option value="HY">	Haryana</option>
+                <option value="HP">Himachal Pradesh</option>
+                <option value="JK">Jammu and Kashmir</option>
+                <option value="JH">Jharkhand</option>
+                <option value="KA">Karnataka</option>
+                <option value="KL">Kerala</option>
+                <option value="LW">Lakshadweep</option>
+                <option value="MP">Madhya Pradesh</option>
+                <option value="MH">Maharashtra</option>
+                <option value="MN">Manipur</option>
+                <option value="MG">Meghalaya</option>
+                <option value="MZ">Mizoram</option>
+                <option value="NA">Nagaland</option>
+                <option value="OD">Odisha</option>
+                <option value="PN">Punjab</option>
+                <option value="PO">Pondicherry</option>
+                <option value="RA">Rajasthan</option>
+                <option value="SM">Sikkim</option>
+                <option value="TN">Tamil Nadu</option>
+                <option value="TE">Telangana</option>
+                <option value="TR">Tripura</option>
+                <option value="UP">Uttar Pradesh</option>
+                <option value="UK">Uttarakhand</option>
+                <option value="WB">	West Bengal</option>
+                </select>
+                                    </div>
+                                </div>
+
+                                <div class="container-fluid row form-group">
+
+                                    <div class="col-4 form-inline">
+                                        <label for="s_country" class=" font-weight-normal">Country:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_country" id="s_country" placeholder="Enter Country" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="s_pincode" class=" font-weight-normal">Pincode:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_pincode" id="s_pincode" placeholder="Enter Pincode" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                </div>
+
+
+                                <div class="container-fluid row form-group">
+                                    <div class="col-4 form-inline">
+                                        <label for="l_houseno" class=" font-weight-normal">Local Adress:&nbsp;&nbsp;</label>
+                                        <input type="text" name="l_houseno" id="l_houseno" class="form-control inputfield" placeholder="House No" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label>Street:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                        <input type="text" name="l_street" id="l_street" placeholder="street" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label>Landmark:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                        <input type="text" name="l_landmark" id="l_landmark" placeholder="Landmark" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                </div>
+
+                                <div class="container-fluid row form-group">
+                                    <div class="col-4 form-inline">
+                                        <label for="l_taluk" class=" font-weight-normal">Taluk:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                        <input type="text" name="l_taluk" id="l_taluk" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="1_district" class=" font-weight-normal">District:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                        <input type="text" name="l_district" id="l_district" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="container-fluid">
+                                    <label for="stud_photo" class=" font-weight-normal">Student Photo:&nbsp;&nbsp;</label>
+                                    <input type="file" id="stud_photo" name="stud_photo" class=" bg-light">
+                                    <button type="button" class="btn btn-primary text-dark font-weight-bold" name="photo_upload" id="photo_upload" style="width: 100px" onclick="Sphoto()">Upload</button>
+                                </div>
+                                <br>
+                                <button type="button" class="btn btn-primary text-dark font-weight-bold" name="sub1" id="sub1" style="width: 200px">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="card">
+                        <div class="card-header bg-info">
+                            <a class="collapsed btn btn-info" data-toggle="collapse" href="#collapseTwo">
+                                <img src="images/parent.jpg" width="50" height="50" class="rounded-circle" alt="">
+                            </a>
+                        </div>
+                        <div id="collapseTwo" class="collapse" data-parent="#student" style="background-color:#bbe1fa;">
+                            <div class="card-body bimage1">
+                                <div class="container-fluid row form-group">
+                                    <div class="col-4 form-inline">
+                                        <label for="s_usn1" class=" font-weight-normal">Student USN:&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_usn1" id="s_usn1" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                </div>
+                                <div class="container-fluid row form-group">
+
+                                    <div class="col-4 form-inline">
+                                        <label for="f_name" class=" font-weight-normal">Father Name:&nbsp;&nbsp;</label>
+                                        <input type="text" name="f_name" id="f_name" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="f_aadhar" class=" font-weight-normal">Aadhar Number:&nbsp;&nbsp;</label>
+                                        <input type="text" name="f_aadhar" id="f_aadhar" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="f_mob" class=" font-weight-normal">Mobile Number:&nbsp;&nbsp;</label>
+                                        <input type="text" name="f_mob" id="f_mob" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+
+                                </div>
+
+                                <div class="container-fluid row form-group">
+                                    <div class="col-4 form-inline">
+                                        <label for="f_email" class=" font-weight-normal">Email Id:&nbsp;&nbsp;</label>
+                                        <input type="email" name="f_email" id="f_email" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="f_occupation" class=" font-weight-normal">Occupation:&nbsp;&nbsp;</label>
+                                        <input type="text" name="f_aadhar" id="f_occupation" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="f_occupation" class=" font-weight-normal">Office Address:&nbsp;&nbsp;</label>
+                                        <input type="text" name="f_aadhar" id="f_office_address_f" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <!-- <div class= "w-25">
+    						<label for="f_address" class=" font-weight-normal">Office Address:&nbsp;&nbsp;</label>
+    							<textarea class="form-control" rows="3" id="f_address" name="f_address"></textarea>
+    					</div> -->
+                                </div>
+
+
+                                <div class="container-fluid row form-group">
+                                    <div class="col-4 form-inline">
+                                        <label for="m_name" class=" font-weight-normal">Mother Name:&nbsp;&nbsp;</label>
+                                        <input type="text" name="m_name" id="m_name" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="m_aadhar" class=" font-weight-normal">Aadhar Number:&nbsp;&nbsp;</label>
+                                        <input type="text" name="m_aadhar" id="m_aadhar" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="m_mob" class=" font-weight-normal">Mobile Number:&nbsp;&nbsp;</label>
+                                        <input type="text" name="m_mob" id="m_mob" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                </div>
+
+                                <div class="container-fluid row form-group">
+                                    <div class="col-4 form-inline">
+                                        <label for="m_email" class=" font-weight-normal">Email Id:&nbsp;&nbsp;</label>
+                                        <input type="email" name="m_email" id="m_email" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="m_occupation" class=" font-weight-normal">Occupation:&nbsp;&nbsp;</label>
+                                        <input type="text" name="m_aadhar" id="m_occupation" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="m_occupation" class=" font-weight-normal">Office Address:&nbsp;&nbsp;</label>
+                                        <input type="text" name="m_aadhar" id="m_office_address_m" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <!-- <div class= "">
+    						<label for="m_address" class=" font-weight-normal">Office Address:&nbsp;&nbsp;</label>
+    						<textarea class="form-control" rows="3" id="m_address" name="m_address"></textarea>
+    					</div> -->
+                                </div>
+                                <br>
+                                <button type="button" class="btn btn-primary text-dark font-weight-bold" name="sub2" id="sub2" style="width: 200px">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header bg-info ">
+                            <a class="collapsed btn btn-info  " data-toggle="collapse" href="#collapseThree">
+                                <img src="images/admission.png" width="50" height="50" class="rounded-circle" alt="">
+                            </a>
+                        </div>
+                        <div id="collapseThree" class="collapse" data-parent="#student" style="background-color:#bbe1fa;">
+                            <div class="card-body bimage1">
+                                <div class="container-fluid row form-group">
+                                    <div class="col-4 form-inline">
+                                        <label for="s_usn2" class=" font-weight-normal">Student USN:&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_usn2" id="s_usn2" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                </div>
+                                <div class="container-fluid row form-group">
+                                    <div class="col-4 form-inline">
+                                        <label for="s_quota" class=" font-weight-normal">Admission Category:&nbsp;&nbsp;</label>
+                                        <select name="s_quota" id="s_quota" class="form-control" style="width: 250px">
+    						<option value="">    SELECT              </option>
+    						<option value="cet">CET</option>
+    						<option value="comedk">COMED-K</option>
+    						<option value="mang">Management</option>
+    						<option value="snq">SNQ</option>
+    						<option value="pm">PM Quota</option>
+    						<option value="sports">Sports</option>
+    						<option value="sg">Scouts and Guides</option>
+    					</select>
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="s_cetrank" class=" font-weight-normal">CET Rank:&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_cetrank" id="s_cetrank" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="s_comedkrank" class=" font-weight-normal">COMED-K Rank:&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_comedkrank" id="s_comedkrank" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                </div>
+
+                                <div class="container-fluid row form-group">
+                                    <div class="col-4 form-inline">
+                                        <label for="s_quota" class=" font-weight-normal">Physically Challenged:&nbsp;&nbsp;</label>
+                                        <select name="s_quota" id="s_pc" class="form-control" style="width: 250px">
+    							<option value="">SELECT</option>
+    							<option value="Yes">YES</option>
+    							<option value="No">NO</option>
+    						</select>
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="s_subcaste" class=" font-weight-normal">Sub Caste:&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_subcaste" id="s_subcaste" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="s_caste" class=" font-weight-normal">Caste:&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_caste" id="s_caste" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                </div>
+                                <br>
+                                <div>
+                                    <label for="s_photo" class=" font-weight-normal">Transfer Certificate:&nbsp;&nbsp;</label>
+                                    <input type="file" id="pc_file" name="pc_file" class=" bg-light">
+                                    <button type="button" class="btn btn-primary text-white" id="pvc_upload" name="pvc_upload" onclick="TCU()">UPLOAD</button>
+                                    <!-- <button type="button" class="btn btn-primary text-white font-weight-bold" name="photo_upload" id="photo_upload" style="width: 100px" onclick="Sphoto()">Upload</button> -->
+                                </div>
+                                <br>
+                                <div class="container-fluid">
+                                    <label for="s_photo" class=" font-weight-normal">Caste Certificate:&nbsp;&nbsp;</label>
+                                    <input type="file" id="caste_file" name="caste_file" class=" bg-light">
+                                    <button type="button" class="btn btn-primary text-white" id="caste_upload" name="caste_upload" onclick="CCU()">UPLOAD</button>
+                                </div>
+                                <br>
+                                <button type="button" class="btn btn-primary text-dark font-weight-bold" name="sub3" id="sub3" style="width: 200px">Submit</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="card-header bg-info">
+                            <a class="collapsed btn btn-info " data-toggle="collapse" href="#collapsefour">
+                                <img src="images/education.png" width="50" height="50" class="rounded-circle" alt="">
+                            </a>
+                        </div>
+                        <div id="collapsefour" class="collapse" data-parent="#student" style="background-color:#bbe1fa;">
+                            <div class="card-body bimage1">
+                                <div class="container-fluid row form-group">
+                                    <div class="col-4 form-inline">
+                                        <label for="s_usn3" class=" font-weight-normal">Student USN:&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_usn3" id="s_usn3" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                </div>
+                                <br>
+                                <!--<div class="container-fluid ">-->
+                                <h5 class="col-4  font-weight-normal">10th standard details</h5>
+                                <div class="container-fluid row form-group">
+                                    <div class="col-4 form-inline">
+                                        <label for="s_sslcboard" class=" font-weight-normal">Name of Board:&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_sslcboard" id="s_sslcboard" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="s_sslcpass" class=" font-weight-normal">Year of Passing:&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_sslcpass" id="s_sslcpass" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="s_sslctm" class=" font-weight-normal">Total Marks:&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_sslctm" id="s_sslctm" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                </div>
+                                <div class=" container-fluid row form-group">
+                                    <div class="col-4 form-inline">
+                                        <label for="s_sslcmo" class=" font-weight-normal">Marks Obtained:&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_sslcmo" id="s_sslcmo" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="s_sslcd" class=" font-weight-normal">Division:&nbsp;&nbsp;</label>
+                                        <select name="s_sslcd" id="s_sslcd" class="form-control" style="width:250px;">
+    								<option value="select">                  </option>
+    								<option value="fcd">FCD</option>
+    								<option value="fc">FC</option>
+    								<option value="sc">SC</option>
+    								<option value="tc">TC</option>
+    							</select>
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="s_sslcper" class=" font-weight-normal">Percentage of Marks:&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_sslcper" id="s_sslcper" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="container-fluid">
+                                    <label for="pc_upload" class=" font-weight-normal">SSLC Marks Card:&nbsp;&nbsp;</label>
+                                    <input type="file" id="sslc_file" name="sslc_file" class=" bg-light">
+                                    <button type="button" class="btn btn-primary text-white" id="pc_upload" name="pc_upload" onclick="SSLCmarks()">UPLOAD</button>
+                                </div>
+                                <br>
+                                <h5 class="col-4  font-weight-normal">12th standard details</h5>
+
+                                <div class="container-fluid row form-group">
+                                    <div class="col-4 form-inline">
+                                        <label for="s_puboard" class=" font-weight-normal">Name of Board:&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_puboard" id="s_puboard" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="s_pupass" class=" font-weight-normal">Year of Passing:&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_pupass" id="s_pupass" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="s_putm" class=" font-weight-normal">Total Marks:&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_putm" id="s_putm" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                </div>
+
+                                <div class="container-fluid row form-group">
+                                    <div class="col-4 form-inline">
+                                        <label for="s_pumo" class=" font-weight-normal">Marks Obtained:&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_pumo" id="s_pumo" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="s_pud" class=" font-weight-normal">Division:&nbsp;&nbsp;</label>
+                                        <select name="s_pud" id="s_pud" class="form-control" style="width: 250px">
+    								<option value="">     SELECT        </option>
+    								<option value="FCD">FCD</option>
+    								<option value="FC">FC</option>
+    								<option value="SC">SC</option>
+    								<option value="TC">TC</option>
+    							</select>
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="s_sslcper" class=" font-weight-normal">Percentage of Marks:&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_puper" id="s_puper" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                </div>
+
+                                <div class="container-fluid row form-group">
+                                    <div class="col-4 form-inline">
+                                        <label for="s_phy" class=" font-weight-normal">Physics:&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_phy" id="s_phy" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="s_chm" class=" font-weight-normal">Chemistry:&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_chm" id="s_chm" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="s_math" class=" font-weight-normal">Mathematics:&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_math" id="s_math" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                </div>
+
+                                <div class="container-fluid row form-group">
+                                    <div class="col-4 form-inline">
+                                        <label for="s_pcmper" class=" font-weight-normal">PCM Percentage:&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_pcmper" id="s_pcmper" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="s_lang" class=" font-weight-normal">10th Medium :&nbsp;&nbsp;</label>
+                                        <select name="s_lang" id="s_lang" class="form-control" style="width: 250px">
+    									<option value="">                  </option>
+    									<option value="EN">English</option>
+    									<option value="HD">Hindi</option>
+    									<option value="KA">Kannada</option>
+    									<option value="TE">Telgu</option>
+    									<option value="TA">Tamil</option>
+    									<option value="MA">Malayalam</option>
+    									<option value="BG">Bengali</option>
+    									<option value="OTH">Others</option>
+    								</select>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="container-fluid">
+                                    <label for="pc_pufile" class=" font-weight-normal">PU Marks Card:&nbsp;&nbsp;</label>
+                                    <input type="file" id="pc_pufile" name="pc_pufile" class=" bg-light">
+                                    <button type="button" class="btn btn-primary text-white" id="pc_upload" name="pc_upload" onclick="PUmarks()">UPLOAD </button>
+                                </div>
+                                <br>
+                                <button type="button" class="btn btn-primary text-dark font-weight-bold" name="sub4" id="sub4" style="width: 200px">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="card-header bg-info">
+                            <a class="collapsed btn btn-info " data-toggle="collapse" href="#collapsefive">
+                                <img src="images/fee.jpg" width="50" height="50" class="rounded-circle" alt="">
+                            </a>
+                        </div>
+                        <div id="collapsefive" class="collapse" data-parent="#student" style="background-color:#bbe1fa;">
+                            <div class="card-body bimage1">
+                                <div class="container-fluid row form-group">
+                                    <div class="col-4 form-inline">
+                                        <label for="s_usn4" class=" font-weight-normal">Student USN:&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_usn4" id="s_usn4" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="fee_rn" class=" font-weight-normal">Receipt No:&nbsp;&nbsp;</label>
+                                        <input type="text" name="fee_rn" id="fee_rn" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+
+                                    <div class="col-4 form-inline">
+                                        <label for="fee_pd" class=" font-weight-normal">Paid Date:&nbsp;&nbsp;</label>
+                                        <input type="date" name="fee_pd" id="fee_p" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                </div>
+
+
+                                <div class="container-fluid row form-group">
+                                    <div class="col-4 form-inline">
+                                        <label for="t_fee" class=" font-weight-normal">Tuition Fees:&nbsp;&nbsp;</label>
+                                        <input type="text" name="t_fee" id="t_fee" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="fee_clg" class=" font-weight-normal">College Fees:&nbsp;&nbsp;</label>
+                                        <input type="text" name="fee_clg" id="fee_clg" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="fee_lls" class=" font-weight-normal">LLS Fees:&nbsp;&nbsp;</label>
+                                        <input type="text" name="fee_lls" id="fee_lls" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                </div>
+
+                                <div class="container-fluid row form-group">
+                                    <div class="col-4 form-inline">
+                                        <label for="fee_u" class=" font-weight-normal">University Fees:&nbsp;&nbsp;</label>
+                                        <input type="text" name="fee_u" id="fee_u" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+
+                                    <div class="col-4 form-inline">
+                                        <label for="fee_e" class=" font-weight-normal">Exam Fees:&nbsp;&nbsp;</label>
+                                        <input type="text" name="fee_e" id="fee_e" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+
+
+                                    <div class="col-4 form-inline">
+                                        <label for="fee_gi" class=" font-weight-normal">Group Insurance Fees:&nbsp;&nbsp;</label>
+                                        <input type="text" name="fee_gi" id="fee_gi" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                </div>
+
+
+                                <div class="container-fluid row form-group">
+                                    <div class="col-4 form-inline">
+                                        <label for="fee_conc" class=" font-weight-normal">Fee Concession:&nbsp;&nbsp;</label>
+                                        <input type="text" name="fee_conc" id="fee_conc" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+
+                                    <div class="col-4 form-inline">
+                                        <label for="fee_due" class=" font-weight-normal">Fee Due:&nbsp;&nbsp;</label>
+                                        <input type="text" name="fee_due" id="fee_due" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+
+                                    <div class="col-4 form-inline">
+                                        <label for="f_remarks" class=" font-weight-normal">Remarks:&nbsp;&nbsp;</label>
+                                        <input type="text" name="f_remarks" id="f_remarks" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                </div>
+                                <br>
+                                <button type="button" class="btn btn-primary text-dark font-weight-bold" name="sub5" id="sub5" style="width: 200px">Submit</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header bg-info ">
+                        <a class="collapsed btn btn-info " data-toggle="collapse" href="#collapsesix">
+                            <img src="images/hostel.png" width="50" height="50" class="rounded-circle" alt="">
+                        </a>
+                    </div>
+
+                    <div id="collapsesix" class="collapse" data-parent="#student" style="background-color:#bbe1fa;">
+                        <div class="card-body bimage1">
+                            <div class="container-fluid ">
+                                <div class="container-fluid row form-group">
+                                    <div class="col-4 form-inline">
+                                        <label for="s_usn5" class=" font-weight-normal">Student USN:&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_usn5" id="s_usn5" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="s_usn5" class=" font-weight-normal">Branch:&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_usn5" id="s_hbranch" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="s_usn5" class=" font-weight-normal">SEM:&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_usn5" id="s_hsem" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="container-fluid ">
+                                <div class="container-fluid row form-group">
+                                    <div class="col-4 form-inline">
+                                        <label for="ss_s" class=" font-weight-normal">Boys/Girls:&nbsp;&nbsp;</label>
+                                        <select class="form-control" name="ss_s" id="ss_s" style="width:210px">
+                                    <option value="Not Selected"></option>
+    								<option value="Boys">Boys </option>
+    								<option value="Girls">Girls</option>
+    								
+    								</select>
+                                    </div>
+                                    <!--<div class="col-4 form-inline">
+    						<label for="Route_no" class=" font-weight-normal">Id:&nbsp;&nbsp;</label>
+    						<input type="text" name="Route_no" id="Route_no" class="form-control inputfield" style="width:300px; height:30px;">
+    						</div>-->
+
+                                    <div class="col-4 form-inline">
+                                        <label for="t_fee" class=" font-weight-normal">Room No:&nbsp;&nbsp;</label>
+                                        <input type="text" name="hroom_no" id="hroom_no" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="ss_h" class=" font-weight-normal">Room Sharing:&nbsp;&nbsp;</label>
+                                        <select class="form-control" name="ss_h" id="ss_h" style="width:210px">
+    								<option value="SELECT"> SELECT </option>
+    								<option value="ONE"> 1 </option>
+    								<option value="TWO">2</option>
+    								<option value="THREE">3</option>
+    								<option value="FOUR">4</option>
+    								</select>
+                                    </div>
+
+                                    
+                                </div>
+
+                                <div class="container-fluid row form-group">
+                                    <div class="col-4 form-inline">
+                                        <label for="h_aa" class=" font-weight-normal">Actual Amount:&nbsp;&nbsp;</label>
+                                        <input type="text" name="h_aa" id="h_aa" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="t_feep" class=" font-weight-normal">Hostel fee paid:&nbsp;&nbsp;</label>
+                                        <input type="text" name="hf_p" id="hf_p" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+
+                                    <div class="col-4 form-inline">
+                                        <label for="t_receiptn" class=" font-weight-normal">Hostel Receipt No:&nbsp;&nbsp;</label>
+                                        <input type="text" name="hr_no" id="hr_no" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+
+                                    <div class="col-4 form-inline">
+                                        <label for="t_pp" class=" font-weight-normal">Paid Date:&nbsp;&nbsp;</label>
+                                        <input type="date" name="h_pd" id="h_pd" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                </div>
+
+                                <!-- <div class="container-fluid row form-group"> -->
+
+
+                                <!--<div class="col-4 form-inline">
+    						<label for="h_ba" class=" font-weight-normal">Balance Amount:&nbsp;&nbsp;</label>
+    						<input type="text" name="h_ba" id="h_ba" class="form-control inputfield" style="width:210px; height:30px;">
+    						</div>-->
+                                <!-- </div> -->
+                            </div>
+                            <br>
+                            <button type="button" class="btn btn-primary text-dark font-weight-bold" name="sub6" id="sub6" style="width: 200px">Submit</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="card-header bg-info">
+                        <a class="collapsed btn btn-info " data-toggle="collapse" href="#collapseseven">
+                            <img src="images/transport.jpg" width="50" height="50" class="rounded-circle" alt="">
+                        </a>
+                    </div>
+                    <div id="collapseseven" class="collapse" data-parent="#student" style="background-color:#bbe1fa;">
+                        <div class="card-body bimage1">
+                            <div class="container-fluid ">
+                                <div class="container-fluid row form-group">
+                                    <div class="col-4 form-inline">
+                                        <label for="s_usn6" class=" font-weight-normal">Student USN:&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_usn6" id="s_usn6" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="s_usn6" class=" font-weight-normal">Branch:&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_usn6" id="s_tbranch" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                    <div class="col-4 form-inline">
+                                        <label for="s_usn6" class=" font-weight-normal">SEM:&nbsp;&nbsp;</label>
+                                        <input type="text" name="s_usn6" id="s_tsem" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-fluid ">
+                                <div class="container-fluid row form-group">
+                                    <div class="col-4 form-inline">
+                                        <label for="Route_no" class=" font-weight-normal">Route No:&nbsp;&nbsp;</label>
+                                        <input type="text" name="Route_no" id="Route_no" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+
+
+
+                                    <div class="col-4 form-inline">
+                                        <label for="t_fee" class=" font-weight-normal">Transport fee:&nbsp;&nbsp;</label>
+                                        <input type="text" name="t_fee" id="t_fee" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+
+                                    <div class="col-4 form-inline">
+                                        <label for="t_feep" class=" font-weight-normal">fee paid:&nbsp;&nbsp;</label>
+                                        <input type="text" name="t_feep" id="t_feep" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                </div>
+
+                                <div class="container-fluid row form-group">
+                                    <div class="col-4 form-inline">
+                                        <label for="t_receiptn" class=" font-weight-normal">Receipt No:&nbsp;&nbsp;</label>
+                                        <input type="text" name="t_receiptn" id="t_receiptn" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+
+                                    <div class="col-4 form-inline">
+                                        <label for="t_pp" class=" font-weight-normal">Pick-up Point:&nbsp;&nbsp; </label>
+                                        <input type="text" name="t_pp" id="t_pp" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+
+                                    <div class="col-4 form-inline">
+                                        <label for="t_dp" class=" font-weight-normal">Drop Point:&nbsp;&nbsp;</label>
+                                        <input type="text" name="t_dp" id="t_dp" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+                                </div>
+
+                                <div class="container-fluid row form-group">
+                                    <div class="col-4 form-inline">
+                                        <label for="t_pd" class=" font-weight-normal">Paid Date:&nbsp;&nbsp;</label>
+                                        <input type="date" name="t_pd" id="t_pd" class="form-control inputfield" style="width:250px; height:30px;">
+                                    </div>
+
+                                </div>
+                                <br>
+                                <button type="button" class="btn btn-primary text-dark font-weight-bold" name="sub7" id="sub7" style="width: 200px">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header bg-info">
+                        <a class="collapsed btn btn-info " data-toggle="collapse" href="#collapseeight">
+                            <img src="images/other.jpg" width="50" height="50" class="rounded-circle" alt="">
+                        </a>
+                    </div>
+                    <div id="collapseeight" class="collapse" data-parent="#student" style="background-color:#bbe1fa;">
+                        <div class="card-body bimage1">
+
+                            <div class="container-fluid row form-group">
+                                <div class="col-4 form-inline">
+                                    <label for="s_usn7" class=" font-weight-normal">Student USN:&nbsp;&nbsp;</label>
+                                    <input type="text" name="s_usn7" id="s_usn7" class="form-control inputfield" style="width:250px; height:30px;">
+                                </div>
+                            </div>
+
+                            <div class="container-fluid row form-group">
+                                <div class="col-4 form-inline">
+                                    <label for="s_guardian" class=" font-weight-normal">Local Guardian:&nbsp;&nbsp;</label>
+                                    <input type="text" name="s_guardian" id="s_gaurdian" class="form-control inputfield" style="width:250px; height:30px;">
+                                </div>
+
+                                <div class="col-4 form-inline">
+                                    <label for="g_phone" class=" font-weight-normal">Phone Number:&nbsp;&nbsp;</label>
+                                    <input type="text" name="g_phone" id="g_phone" class="form-control inputfield" style="width:250px; height:30px;">
+                                </div>
+                                <div class="col-4 form-inline">
+                                    <label for="g_address" class=" font-weight-normal">Address:&nbsp;&nbsp;</label>
+                                    <input type="text" name="t_area" id="t_area" class="form-control inputfield" style="width:250px; height:30px;">
+                                </div>
+                            </div>
+
+                            <div class="container-fluid row form-group">
+
+                                <div class="col-4 form-inline">
+                                    <label for="a_comment" class=" font-weight-normal">Other Comments:&nbsp;&nbsp;</label>
+                                    <input type="text" name="t_area" id="t_area" class="form-control inputfield" style="width:250px; height:30px;">
+                                </div>
+                            </div>
+                            <br>
+                            <button type="button" class="btn btn-primary text-dark font-weight-bold" name="sub8" id="sub8" style="width: 200px">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </form>
+            <!-- <a href="RetriveData.html">Retrieve data page</a> -->
+        </div>
+    </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-storage.js "></script>
+
+    <script src="JavaScript/admin_data.js"></script>
+</body>
+
+</html>

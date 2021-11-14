@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+  <title>AMC College Management System</title>
+  <!-- Google-fonts -->
+          <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+
+  <!-- Font-awesome -->
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+  <!-- Java-Scripts -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <style media="screen">
+  body,html{
+    line-height: 1;
+    height: 100%;
+    margin: 0;
+  }
+  .bg {
+    /* The image used */
+    background-image: url("images/try.png");
+
+    /* Full height */
+      height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .heading_ann{
+    margin-left: 650px;
+    line-height:1.2rem;
+  }
+  .heading_ann1{
+    margin-left: 500px;
+    line-height:1.2rem;
+  }
+  .heading_ann12{
+    margin-left: 550px;
+    line-height:1.2rem;
+  }
+.container1{
+    background-color: #B8DFD8;
+    margin: 1% 2%;
+  }
+  .marq{
+    margin: 1% 2%;
+  }
+  .container-fluid{
+    background-color: #E8F6EF;
+  }
+</style>
+
+</head>
+  <body>
+      <!-- navbar -->
+      <div class="navbar-container text-center">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">AMC ENGINEERING COLLEGE</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                     <a class="nav-link" href="#ex">Exam Information</a>
+                </li>
+                <li class="nav-item ">
+                     <a class="nav-link" href="#cta">Activities</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="#ft">Fest</a>
+                </li>
+                <li class="nav-item ">
+                     <a class="nav-link" href="#nt">Notifications</a>
+                </li>
+
+              <li class="nav-item active">
+                <a href="retrive_s/retrive_student.html" class="btn btn-light" tabindex="-1" role="button" aria-disabled="true"><img src="images/back.png" width="20px" height="20px"></img></a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+    </div><br>
+    <br>
+    <br>
+    <!-- /* carousel */ -->
+    <!-- Testimonials -->
+
+    <div class="container">
+      <div>
+
+      </div>
+
+        <marquee  behavior="scroll" direction="left" scrollamount="10" loop="10">
+        <img style="width:100%; height:300%;" src="images/pic.jpg">
+        <img style="width:50%; height:100%;" src="images/fest.jpg">
+        <img style="width:50%; height:300%;" src="images/fest1.jpeg">
+        <img style="width:50%; height:300%;" src="images/fest2.jpeg">
+        <img style="width:50%; height:300%;" src="images/pic.jpg">
+        <img style="width:100%; height:300%;" src="images/pic.jpg">
+        <img style="width:100%; height:300%;" src="images/pic.jpg">
+        <img style="width:100%; height:300%;" src="images/pic.jpg" >
+        <img style="width:100%; height:300%;" src="images/pic.jpg" >
+        <img style="width:100%; height:300%;" src="images/pic.jpg" >
+      </marquee>
+    </div>
+
+<br>
+<br>
+<h1 class="heading_ann" id="ft">FEST</h1>
+<br>
+<br>
+      <section class="ft">
+        <div class="container1">
+          <div class="row align-items-center">
+            <div class="col-lg-6 ">
+              <div class="p-5">
+                <img class="img-fluid rounded-circle" src="images/fest1.jpeg" alt="">
+              </div>
+            </div>
+            <div class="col-lg-6 ">
+              <div class="p-5">
+                <h4 class="display-4">COLLOSEUM</h4>
+                <br>
+                <!-- <p>I really don't know where to start. As it has been a ride of highs and lows, starting from the square one is mandatory. It was just my first week of this hostel life when you spent whole the night taking care of me as I was very ill. That very moment, holds a special place in my heart. You've done a lot for me but that one moment is very dear to me. We both know our relationship has been a bumpy ride, i would say, hella ride. But after everything, both good and worse, you know that I will alwyas love you💗💗 no matter what. Thankyou for being my MOM here(lol), thankyou for scolding me and motivating me. I love you a lot. Happy birthday 💗💗 Plus, you are very beautiful. Let no one tell you otherwise. ONCE AGAIN MANY MANY HAPPY RETURNS OF THE DAY</p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+   <section>
+        <div class="container1">
+          <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-2">
+              <div class="p-5">
+                <img class="img-fluid rounded-circle" src="images/fest1.jpeg" alt="">
+              </div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+              <div class="p-5">
+                <h4 class="display-4">MELANGE</h4>
+                <!-- <p>On your birthday may all that you asked from God be granted to you hundred fold! I pray that God blesses you with all the happiness in this universe. May you prosper and shine everywhere you go. Happy b'day girl 🎁🎂 Enjoy your day! Stay happy 🤗Stay blessed 😇 .</p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+          <section>
+            <div class="container1">
+              <div class="row align-items-center">
+                <div class="col-lg-6 ">
+                  <div class="p-5">
+                    <img class="img-fluid rounded-circle" src="images/fest2.jpeg" alt="">
+                  </div>
+                </div>
+                <div class="col-lg-6  order-lg-1">
+                  <div class="p-5">
+                    <h4 class="display-4">MECH MELA</h4>
+                    <!-- <p>I really don't know where to start. As it has been a ride of highs and lows, starting from the square one is mandatory. It was just my first week of this hostel life when you spent whole the night taking care of me as I was very ill. That very moment, holds a special place in my heart. You've done a lot for me but that one moment is very dear to me. We both know our relationship has been a bumpy ride, i would say, hella ride. But after everything, both good and worse, you know that I will alwyas love you💗💗 no matter what. Thankyou for being my MOM here(lol), thankyou for scolding me and motivating me. I love you a lot. Happy birthday 💗💗 Plus, you are very beautiful. Let no one tell you otherwise. ONCE AGAIN MANY MANY HAPPY RETURNS OF THE DAY</p> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+            <!-- exam info -->
+<br>
+<br>
+<br>
+<br>
+<h1 class="heading_ann1" id="ft">EXAM INFORMATION</h1>
+<br>
+<br>
+            <div class="body-of-page" id="ex">
+              <img class="bodyimage"src="images/body-img.jpg" alt="Just a random pic of students giving exam">
+              <div class="body-header">
+              <!-- <h2>Latest notification</h2> -->
+              <br>
+              <br>
+              <ul>
+                <li><a href="#">Last Date of Submit Form</a></li>
+                <li><a href="Circular1155.pdf">Notice Regarding Semester Exams July-2021</a></li>
+                <li><a href="https://results.vtu.ac.in">Vtu Result</a></li>
+              </ul>
+              </div>
+            </div>
+<br>
+<br>
+<!-- notification -->
+<br>
+<br>
+<br>
+<br>
+<h1 class="heading_ann12" id="nt">NOTIFICATION</h1>
+<br>
+<br>
+
+            <div class="container-fluid ">
+
+
+
+              <div class="row row-cols-1 row-cols-md-3 row-main">
+                <div class="col mb-4">
+                  <br>
+                  <br>
+                  <h5 class="text-center">Notice</h5>
+
+                <marquee class="marq" behavior="scroll" direction="up" scrollamount="1" loop="100">
+                  <ul>
+                      <li>
+                        <a href="#">Sitting arrangements for Internals CSE</a>
+                      </li>
+                      <li><a href="#">Students of 1st year are needed to bring their College Fee Receipt</a></li>
+                      <li><a href="#">Sitting arrangements for Internals ECE</a></li>
+                      <li><a href="#">Students of 1st year are needed to bring their College Fee Receipt</a></li>
+                      <li><a href="#">Sitting arrangements for Internals MECH</a></li>
+                  </ul>
+              </marquee>
+            </div>
+            <div class="col mb-4">
+              <br>
+              <br>
+              <h5 class="text-center">Congratulations</h5>
+            <marquee class="marq" behavior="scroll" direction="up" scrollamount="1" loop="100">
+              <ul>
+                <li><a href="#">Congratulations Naveen, Amrit for coming 1st in IoT Seminar held in SBJ College, Bangalore.</a></li>
+                <li><a href="#">Congratulations Ajay, Amit for coming 2nd in Drag Race held in Karnataka Sports Stadium, Bangalore</a></li>
+               <li><a href="#">Congratulations Team Manor for coming 1st in Free Dance competition held in SBJ College, Bangalore</a></li>
+                <li><a href="#">Congratulations Naveen, Amrit for coming 1st in IoT Seminar held in SBJ College, Bangalore</a></li>
+              </ul>
+
+
+
+          </marquee>
+        </div>
+        <div class="col mb-4">
+          <br>
+          <br>
+          <h5 class="text-center">Updates</h5>
+          <br>
+        <marquee class="marq" behavior="scroll" direction="up" scrollamount="1" loop="100">
+          <ul>
+            <li><a href="#">Physics club to not have Meeting on 08/08/2021.</a></li>
+            <li><a href="#">Eureka College fest information. </a></li>
+            <li><a href="#">Maths club to  have Meeting on 07/08/2021.</a></li>
+            <li><a href="#">Physics club to not have Meeting on 08/08/2021.</a></li>
+            <li><a href="#">Eureka College fest information. </a></li>
+            <li><a href="#">Maths club to  have Meeting on 07/08/2021.</a></li>
+          </ul>
+
+      </marquee>
+    </div>
+      </div>
+      </div>
+<br>
+<br><br>
+      <footer>  <div class="footer-header text-center" style="background-color:#f4f6ff;"
+          <br>
+          <p class="footer-text">@ ACMS 2020. All Rights Reserved.</p>
+          <i class="footer-fab fab fa-twitter"></i>
+          <i class="footer-fab fab fa-facebook-f"></i>
+          <i class="footer-fab fab fa-instagram"></i>
+          <i class="footer-fab fas fa-envelope-square"></i>
+          <i class="footer-fab fab fa-linkedin"></i>
+        </div></footer>
+    </body>
+    </HTML>
